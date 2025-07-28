@@ -1,0 +1,47 @@
+<style>
+  @keyframes glow {
+    0%, 100% {
+      text-shadow: 0 0 5px #000000aa, 0 0 10px #00000099, 0 0 20px #00000077;
+    }
+    50% {
+      text-shadow: 0 0 10px #000000cc, 0 0 20px #000000bb, 0 0 30px #000000aa;
+    }
+  }
+
+  .glow-text {
+    animation: glow 2s ease-in-out infinite;
+  }
+
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  .bounce {
+    animation: bounce 1s infinite;
+  }
+</style>
+
+<section 
+  class="relative text-white text-center py-20 h-screen transition-all duration-700 hover:bg-gray-900"
+  style="background-image: url('/security.jpg'); background-size: cover; background-position: center;"
+>
+  <div class="absolute inset-0 bg-opacity-30"></div> <!-- Dark overlay -->
+
+  <div class="relative z-10 flex flex-col items-center justify-center h-full px-4">
+    <h1 class="text-4xl md:text-6xl font-bold glow-text">
+      SecureX: Elite Physical Security
+    </h1>
+    <p class="mt-4 text-lg max-w-xl mx-auto">
+      Trained guards, CCTV systems, and perimeter control-protection that never sleeps.
+    </p>
+    <a href="#contact" class="inline-block mt-8 px-8 py-3 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-lg shadow-lg transition bounce">
+      Contact Us
+    </a>
+  </div>
+</section>
+
