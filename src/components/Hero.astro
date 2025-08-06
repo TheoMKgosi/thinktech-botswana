@@ -1,17 +1,15 @@
 <style>
   @keyframes glow {
     0%, 100% {
-      text-shadow: 0 0 5px #000000aa, 0 0 10px #00000099, 0 0 20px #00000077;
+      text-shadow: 0 0 5px #ff0000aa, 0 0 10px #ff000099, 0 0 20px #ff000077;
     }
     50% {
-      text-shadow: 0 0 10px #000000cc, 0 0 20px #000000bb, 0 0 30px #000000aa;
+      text-shadow: 0 0 10px #ff0000cc, 0 0 20px #ff0000bb, 0 0 30px #ff0000aa;
     }
   }
-
   .glow-text {
     animation: glow 2s ease-in-out infinite;
   }
-
   @keyframes bounce {
     0%, 100% {
       transform: translateY(0);
@@ -20,27 +18,24 @@
       transform: translateY(-10px);
     }
   }
-
   .bounce {
     animation: bounce 1s infinite;
   }
 </style>
-
 <section 
   class="relative text-white text-center py-20 h-screen transition-all duration-700 hover:bg-gray-900"
-  style="background-image: url('/security.jpg'); background-size: cover; background-position: center;"
+  style="background-image: url('/security-hero.jpg'); background-size: cover; background-position: center;"
 >
-  <div class="absolute inset-0 bg-opacity-30"></div> <!-- Dark overlay -->
-
+  <div class="absolute inset-0 bg-black/40"></div> <!-- Dark overlay -->
   <div class="relative z-10 flex flex-col items-center justify-center h-full px-4">
     <h1 class="text-4xl md:text-6xl font-bold glow-text">
-      SecureX: Elite Physical Security
+      SecureX: Cyber Defence Unit
     </h1>
     <p class="mt-4 text-lg max-w-xl mx-auto">
-      Trained guards, CCTV systems, and perimeter control-protection that never sleeps.
+      Firewalls, threat hunting, zero-trust systems—protection that evolves faster than the threats.
     </p>
     <a href="#contact" class="inline-block mt-8 px-8 py-3 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-lg shadow-lg transition bounce">
-      Contact Us
+      Engage Security
     </a>
   </div>
 </section>
