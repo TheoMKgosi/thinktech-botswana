@@ -5,7 +5,8 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
-  base: '/thinktech-botswana/',
+  site: 'https://theomkgosi.github.io/',
+  base: '/thinktech-botswana',
   vite: {
     plugins: [tailwindcss()]
   }
