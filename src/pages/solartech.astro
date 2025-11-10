@@ -1,5 +1,7 @@
 ---
 import '../styles/global.css' 
+import { Image } from 'astro:assets'
+import cardImage from './screenshot.png'
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -107,40 +109,45 @@ import '../styles/global.css'
         </div>
 
         <div class="grid md:grid-cols-3 gap-8">
-          <div class="bg-gradient-to-br from-blue-50 to-indigo-100 p-8 rounded-3xl hover-lift">
-            <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center mb-6">
-              <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-              </svg>
+          <!-- Card product 1 -->
+          <div class="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-3xl hover-lift">
+            <Image src={cardImage} alt="Card product" class="rounded-t-2xl w-full"/>
+            <div class="p-6">
+              <h3 class="text-2xl font-bold mb-4 text-gray-800 text-center">Solar Panels and Batteries</h3>
+              <ul class="text-gray-600 list-disc">
+                <li>Renesys Solar Panels Grade A</li>
+                <li>Lithium Ion ( Freedom Won )</li>
+                <li>Lead Acid</li>
+                <li>Victron MPPT</li>
+              </ul>
             </div>
-            <h3 class="text-2xl font-bold mb-4 text-gray-800">Smart Energy Management</h3>
-            <p class="text-gray-600 leading-relaxed">
-              AI-powered system that optimizes energy production and consumption, reducing waste and maximizing savings.
-            </p>
           </div>
 
-          <div class="bg-gradient-to-br from-green-50 to-emerald-100 p-8 rounded-3xl hover-lift">
-            <div class="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mb-6">
-              <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"/>
-              </svg>
+          <!-- Card product 2 -->
+          <div class="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-3xl hover-lift">
+            <Image src={cardImage} alt="Card product" class="rounded-t-2xl w-full"/>
+            <div class="p-6">
+              <h3 class="text-2xl font-bold mb-4 text-gray-800 text-center">System Accesories</h3>
+              <ul class="text-gray-600 list-disc">
+                <li> DC Cabling and Components (some included in combiner boxes)</li>
+                <li>Victron Energy Data Cables</li>
+                <li>Online Monitoring</li>
+                <li>Victron BatteryChargers</li>
+              </ul>
             </div>
-            <h3 class="text-2xl font-bold mb-4 text-gray-800">Maximum Efficiency</h3>
-            <p class="text-gray-600 leading-relaxed">
-              Advanced photovoltaic cells with 99.2% efficiency rating, generating more power from less sunlight.
-            </p>
           </div>
 
-          <div class="bg-gradient-to-br from-yellow-50 to-orange-100 p-8 rounded-3xl hover-lift">
-            <div class="w-16 h-16 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-2xl flex items-center justify-center mb-6">
-              <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z" clip-rule="evenodd"/>
-              </svg>
+          <!-- Card product 3 -->
+          <div class="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-3xl hover-lift">
+            <Image src={cardImage} alt="Card product" class="rounded-t-2xl w-full"/>
+            <div class="p-6">
+              <h3 class="text-2xl font-bold mb-4 text-gray-800 text-center">Inverters</h3>
+              <ul class="text-gray-600 list-disc">
+                <li>Off- Grid (Victron)</li>
+                <li>Grid- Tie (Fronius Inverter)</li>
+                <li>Hybrid (ATESS)</li>
+              </ul>
             </div>
-            <h3 class="text-2xl font-bold mb-4 text-gray-800">25-Year Warranty</h3>
-            <p class="text-gray-600 leading-relaxed">
-              Industry-leading warranty protection with guaranteed performance and comprehensive maintenance support.
-            </p>
           </div>
         </div>
       </div>
