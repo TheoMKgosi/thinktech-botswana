@@ -12,7 +12,11 @@
     "@astrojs/check": "^0.9.4",
     "@tailwindcss/vite": "^4.1.11",
     "astro": "^5.11.0",
+    "astro-icon": "^1.1.5",
     "tailwindcss": "^4.1.11",
     "typescript": "^5.8.3"
+  },
+  "devDependencies": {
+    "@iconify-json/mdi": "^1.2.3"
   }
 }

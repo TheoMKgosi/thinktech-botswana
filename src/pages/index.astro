@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css' 
+import { Icon } from 'astro-icon/components'
 ---
 
 <html lang="en">
@@ -28,8 +29,9 @@ import '../styles/global.css'
           <div class="hidden md:block">
             <div class="ml-10 flex items-baseline space-x-8">
               <a href="#home" class="hover:text-primary transition-colors duration-300">Home</a>
-              <a href="#companies" class="hover:text-primary transition-colors duration-300">Companies</a>
               <a href="#about" class="hover:text-primary transition-colors duration-300">About</a>
+              <a href="#services" class="hover:text-primary transition-colors duration-300">Services</a>
+              <a href="#companies" class="hover:text-primary transition-colors duration-300">Companies</a>
               <a href="#contact" class="hover:text-primary transition-colors duration-300">Contact</a>
             </div>
           </div>
@@ -43,7 +45,7 @@ import '../styles/global.css'
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="min-h-screen bg-[url(/thinktech-logo.jpg)] bg-cover flex items-center justify-center relative">
+    <section id="home" class="min-h-screen bg-[url(/thinktech-botswana/thinktech-logo.jpg)] bg-cover flex items-center justify-center relative">
       <div class="absolute inset-0 bg-black/70"></div>
 
       <!-- Floating Elements -->
@@ -68,6 +70,168 @@ import '../styles/global.css'
           <a href="#about" class="px-8 py-4 border-2 border-primary text-primary rounded-lg font-semibold hover:bg-primary hover:text-white transition-all duration-300">
             Learn More
           </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gradient-to-br from-gray-800 to-gray-900">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <div class="mb-8">
+              <h2 class="text-4xl md:text-5xl font-bold  bg-primary bg-clip-text text-transparent">
+                About the company
+              </h2>
+              <p class="text-sm text-gray-500">
+                Shaping Tomorrow's Botswana
+              </p>
+            </div>
+            <p class="text-xl text-gray-300 mb-8 leading-relaxed">
+              We are founded on the concept of being
+              powered by intellect and driven by value,
+              therefore the vision of the company
+              manifests itself in two ways that is:
+            </p>
+            <p class="text-xl text-gray-300 mb-8 leading-relaxed">
+              ✓ To accelerate the world’s transition to
+              advanced technology
+              <br />
+              ✓ To make commerce better for
+              everyone, so businesses can focus on
+              what they do best
+            </p>
+          </div>
+          <div class="space-y-6">
+            <h3 class="text-2xl font-extrabold shadow-2xs shadow-primary text-center text-primary ">Core Values</h3>
+            <div class="flex items-start space-x-4">
+              <div class="flex-shrink-0 w-8 h-8 bg-primary rounded-full flex items-center justify-center mt-1">
+                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </div>
+              <div>
+                <h4 class="text-xl font-semibold mb-2">INTEGRITY & HONESTY</h4>
+                <p class="text-gray-400">We are committed to working and treating all our partners with unwavering respect, fairness and truthfulness. We measure ourselves
+                  against the highest standards of ethics, integrity and economic
+                  responsibility</p>
+              </div>
+            </div>
+            <div class="flex items-start space-x-4">
+              <div class="flex-shrink-0 w-8 h-8 bg-secondary rounded-full flex items-center justify-center mt-1">
+                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </div>
+              <div>
+                <h4 class="text-xl font-semibold mb-2">ACCOUNTABILITY</h4>
+                <p class="text-gray-400">We pride ourselves on providing visibility into the successes, and sometimes hiccups, of our business as we grow and scale. We hold ourselves responsible
+                  for any outcome even losses. As our motto goes our work is validated by
+                  informed scientific methods and procedures.</p>
+              </div>
+            </div>
+            <div class="flex items-start space-x-4">
+              <div class="flex-shrink-0 w-8 h-8 bg-accent rounded-full flex items-center justify-center mt-1">
+                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </div>
+              <div>
+                <h4 class="text-xl font-semibold mb-2">INNOVATIVE & RESULT ORIENTED</h4>
+                <p class="text-gray-400">At Thinktech Innovation Botswana we accommodate and embrace every
+                  customer and employee, we take their individual differences as building
+                  cornerstones of our diversity and as a chance to innovate, improve and reach
+                  milestones that we have never met before. You can trust us for timely and</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="py-20 relative">
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-20">
+            <h2 class="text-5xl md:text-6xl font-bold mb-6 bg-primary bg-clip-text text-transparent">
+              Our Services
+            </h2>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-3 mx-auto gap-8">
+          <!-- Service Card 1 -->
+          <div class="px-5 py-7 bg-gray-700 rounded-3xl">
+            <div>
+              <Icon name="mdi:support" size="150" class="mx-auto"/>
+            </div>
+            <h3 class="text-center font-semibold mb-5">ICT SUPPORT</h3>
+            <p class="text-gray-400">Providing End User Help Desk support, End User Systems Training and Organisation ICT Support in general.</p>
+          </div>
+          <!-- Service Card 2 -->
+          <div class="px-5 py-7 bg-gray-700 rounded-3xl">
+            <div>
+              <Icon name="mdi:wrench-cog-outline" size="150" class="mx-auto"/>
+            </div>
+            <h3 class="text-center font-semibold mb-5">HARDWARE REPAIRS AND SOFTWARE CONFIGURATION</h3>
+            <p class="text-gray-400">Provides complete solutions for all hardware repairs and software configurations, covering computers, laptops, printers, and application programs.</p>
+          </div>
+          <!-- Service Card 3 -->
+          <div class="px-5 py-7 bg-gray-700 rounded-3xl">
+            <div>
+              <Icon name="mdi:database-arrow-up-outline" size="150" class="mx-auto"/>
+            </div>
+            <h3 class="text-center font-semibold mb-5">DATA MANAGEMENT</h3>
+            <p class="text-gray-400">We help organisations securely manage, protect, and process their data while ensuring accessibility and reliability, including services like data recovery, backup, deletion, and mass sanitization.</p>
+          </div>
+          <!-- Service Card 4 -->
+          <div class="px-5 py-7 bg-gray-700 rounded-3xl">
+            <div>
+              <Icon name="mdi:remote-desktop" size="150" class="mx-auto"/>
+            </div>
+            <h3 class="text-center font-semibold mb-5">DESKTOP MANAGEMENT SERVICES</h3>
+            <p class="text-gray-400">We have the ability to automate, standardize, secure, and audit all the computing devices within any organisational setup. Our staff is well trained to standardize user workspaces, support users remotely,ensure users meet IT department SLAs, improve self service, protect sensitive data, remove spyware and so forth.</p>
+          </div>
+          <!-- Service Card 5 -->
+          <div class="px-5 py-7 bg-gray-700 rounded-3xl">
+            <div>
+              <Icon name="mdi:database-arrow-up-outline" size="150" class="mx-auto"/>
+            </div>
+            <h3 class="text-center font-semibold mb-5">NETWORK & SERVER MANAGEMENT</h3>
+            <p class="text-gray-400">We specialise in network and server administration, ensuring optimal performance, fault management, and quality of service through advanced network management systems.</p>
+          </div>
+          <!-- Service Card 6 -->
+          <div class="px-5 py-7 bg-gray-700 rounded-3xl">
+            <div>
+              <Icon name="mdi:security" size="150" class="mx-auto"/>
+            </div>
+            <h3 class="text-center font-semibold mb-5">ICT SECURITY AND RISK MANAGEMENT</h3>
+            <p class="text-gray-400">We ensure your organisation has robust ICT security and risk mitigation, managing infrastructure, enforcing policies, and preventing data breaches.</p>
+          </div>
+          <!-- Service Card 7 -->
+          <div class="px-5 py-7 bg-gray-700 rounded-3xl">
+            <div>
+              <Icon name="mdi:server" size="150" class="mx-auto"/>
+            </div>
+            <h3 class="text-center font-semibold mb-5">IMAGING, MIGRATION & HOSTING SERVICES</h3>
+            <p class="text-gray-400">We offers web hosting, offsite backups, and virtual desktops, ensuring secure information migration and workstation imaging for every desktop using efficient tools.</p>
+          </div>
+          <!-- Service Card 8 -->
+          <div class="px-5 py-7 bg-gray-700 rounded-3xl">
+            <div>
+              <Icon name="mdi:developer-board" size="150" class="mx-auto"/>
+            </div>
+            <h3 class="text-center font-semibold mb-5">SOFTWARE DEVELOPMENT & MAINTENANCE</h3>
+            <p class="text-gray-400">Providing End User Help Desk support, End User Systems Training and Organisation ICT Support in general.</p>
+          </div>
+          <!-- Service Card 9 -->
+          <div class="px-5 py-7 bg-gray-700 rounded-3xl">
+            <div>
+              <Icon name="mdi:truck-cargo-container" size="150" class="mx-auto"/>
+            </div>
+            <h3 class="text-center font-semibold mb-5">ICT SUPPLIES AND CONSUMABLES</h3>
+            <p class="text-gray-400">Providing End User Help Desk support, End User Systems Training and Organisation ICT Support in general.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -162,76 +326,6 @@ import '../styles/global.css'
       </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="py-20 bg-gradient-to-br from-gray-800 to-gray-900">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid lg:grid-cols-2 gap-16 items-center">
-          <div>
-            <h2 class="text-4xl md:text-5xl font-bold mb-8 bg-primary bg-clip-text text-transparent">
-              Shaping Tomorrow's World
-            </h2>
-            <p class="text-xl text-gray-300 mb-8 leading-relaxed">
-              We are founded on the concept of being
-              powered by intellect and driven by value,
-              therefore the vision of the company
-              manifests itself in two ways that is:
-            </p>
-            <p class="text-xl text-gray-300 mb-8 leading-relaxed">
-              ✓ To accelerate the world’s transition to
-              advanced technology
-              <br />
-              ✓ To make commerce better for
-              everyone, so businesses can focus on
-              what they do best
-            </p>
-          </div>
-          <div class="space-y-6">
-            <h3 class="text-2xl font-extrabold shadow-2xs shadow-primary text-center text-primary">Core Values</h3>
-            <div class="flex items-start space-x-4">
-              <div class="flex-shrink-0 w-8 h-8 bg-primary rounded-full flex items-center justify-center mt-1">
-                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                </svg>
-              </div>
-              <div>
-                <h4 class="text-xl font-semibold mb-2">INTEGRITY & HONESTY</h4>
-                <p class="text-gray-400">We are committed to working and treating all our partners with unwavering respect, fairness and truthfulness. We measure ourselves
-                  against the highest standards of ethics, integrity and economic
-                  responsibility</p>
-              </div>
-            </div>
-            <div class="flex items-start space-x-4">
-              <div class="flex-shrink-0 w-8 h-8 bg-secondary rounded-full flex items-center justify-center mt-1">
-                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                </svg>
-              </div>
-              <div>
-                <h4 class="text-xl font-semibold mb-2">ACCOUNTABILITY</h4>
-                <p class="text-gray-400">We pride ourselves on providing visibility into the successes, and sometimes hiccups, of our business as we grow and scale. We hold ourselves responsible
-                  for any outcome even losses. As our motto goes our work is validated by
-                  informed scientific methods and procedures.</p>
-              </div>
-            </div>
-            <div class="flex items-start space-x-4">
-              <div class="flex-shrink-0 w-8 h-8 bg-accent rounded-full flex items-center justify-center mt-1">
-                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                </svg>
-              </div>
-              <div>
-                <h4 class="text-xl font-semibold mb-2">INNOVATIVE & RESULT ORIENTED</h4>
-                <p class="text-gray-400">At Thinktech Innovation Botswana we accommodate and embrace every
-                  customer and employee, we take their individual differences as building
-                  cornerstones of our diversity and as a chance to innovate, improve and reach
-                  milestones that we have never met before. You can trust us for timely and</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      </div>
-    </section>
 
     <!-- Contact Section -->
     <section id="contact" class="py-20">
@@ -281,6 +375,17 @@ import '../styles/global.css'
                 <div>
                   <h4 class="font-semibold text-white">Address</h4>
                   <p class="text-gray-400">123 Innovation Drive, Tech City, TC 12345</p>
+                </div>
+              </div>
+              <div class="flex items-center space-x-4">
+                <div class="w-12 h-12 border-white border-2 rounded-full flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M12 12v8m0 0l-4-4m4 4l4-4M12 4v8" />
+                  </svg>
+                </div>
+                <div>
+                  <!-- Download button of the company profile -->
+                  <a href="/thinktech-botswana/Profile_Thinktech.pdf" download class="p-4 border-2 rounded-2xl hover:bg-gray-700">Download Company Profile</a>
                 </div>
               </div>
             </div>
