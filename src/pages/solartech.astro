@@ -17,27 +17,28 @@ import cardImage from './screenshot.png'
       <nav class="container mx-auto px-6  flex">
         <img src="/thinktech-botswana/solar-logo.jpg" alt="Solar Tech Energy Systems Logo" width="100" class="pr-2" />
 
-          <div class="hidden md:flex items-center space-x-8">
-            <a href="#home" class="text-gray-700 hover:text-yellow-600 transition-colors">Home</a>
-            <a href="#solutions" class="text-gray-700 hover:text-yellow-600 transition-colors">Solutions</a>
-            <a href="#about" class="text-gray-700 hover:text-yellow-600 transition-colors">About</a>
-            <a href="#contact" class="text-gray-700 hover:text-yellow-600 transition-colors">Contact</a>
-            <button class="bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-6 py-2 rounded-full hover:shadow-lg transition-all">
-              Get Quote
-            </button>
-          </div>
-
-          <button class="md:hidden">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-            </svg>
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="#home" class="text-gray-700 hover:text-yellow-600 transition-colors">Home</a>
+          <a href="#about" class="text-gray-700 hover:text-yellow-600 transition-colors">About</a>
+          <a href="#services" class="text-gray-700 hover:text-yellow-600 transition-colors">Services</a>
+          <a href="#products" class="text-gray-700 hover:text-yellow-600 transition-colors">Products</a>
+          <a href="#contact" class="text-gray-700 hover:text-yellow-600 transition-colors">Contact</a>
+          <button class="bg-gradient-to-r from-green-500 to-green-600 text-white px-6 py-2 rounded-full hover:shadow-lg transition-all">
+            Get Quote
           </button>
+        </div>
+
+        <button class="md:hidden">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
         </div>
       </nav>
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="min-h-screen flex items-center relative overflow-hidden pt-20 bg-gradient-to-br from-blue-600 via-purple-600 to-blue-800">
+    <section id="home" class="min-h-screen flex items-center relative overflow-hidden pt-20 bg-gradient-to-br from-blue-600 via-green-600 to-blue-800">
       <div class="absolute inset-0 bg-gradient-to-r from-yellow-400/20 to-orange-400/20"></div>
 
       <div class="container mx-auto px-6 relative z-10">
@@ -96,8 +97,53 @@ import cardImage from './screenshot.png'
       </div>
     </section>
 
+    <!-- About Section -->
+    <section id="about" >
+      <div class="flex bg-[url(/thinktech-botswana/solarImage.png)] bg-cover">
+        <div class="items-center flex-1/2 bg-white py-16 px-4 rounded-r-[100px]">
+          <h2 class="text-4xl md:text-5xl font-bold mb-6 text-gray-800">
+            Leading the Solar Revolution
+          </h2>
+          <p class="text-xl text-gray-600 mb-6 leading-relaxed">
+            Solartech Energy Systems(Pty) Ltd is a multi-discipline company that specialises
+            in Solar Technolgy. Solartech Energy Systems delivers high quality and reliable
+            Solar Energy services, construction and supplies services to different clients and
+            customers, ranging from individuals to corporations and government sectors at all
+            times.
+          </p>
+          <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+Our <span class="font-bold">MISSION</span> is to be a globalised producer of clean energy products.
+          </p>
+          <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+            Our <span class="font-bold">VISION</span> is to be the first choice clean energy & reliable power producer.
+          </p>
+        </div>
+        <div class="flex-1/3">
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="py-20">
+      <h2 class="text-4xl md:text-5xl font-bold mb-6 text-gray-800 text-center">
+        What we offer?
+      </h2>
+      <div class="mx-auto w-max">
+        <ul class="list-image-[url(/thinktech-botswana/checkmark.svg)] ">
+          <li>AC/DC Solar Pump System</li>
+          <li>Home / Farm Off grid System</li>
+          <li>Solar Equipment Sales</li>
+          <li>Solar Panel Installation</li>
+          <li>Solar System Design</li>
+          <li>Water Tests & Soil Tests</li>
+          <li>Net Metering Setup</li>
+          <li>Solar System Maintenace</li>
+        </ul>
+      </div>
+    </section>
+
     <!-- Features Section -->
-    <section id="solutions" class="py-20 bg-white">
+    <section id="products" class="py-20 bg-white">
       <div class="container mx-auto px-6">
         <div class="text-center mb-16">
           <h2 class="text-4xl md:text-5xl font-bold mb-6 text-gray-800">
@@ -153,34 +199,9 @@ import cardImage from './screenshot.png'
       </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" >
-      <div class="flex bg-[url(/solarImage.png)] bg-cover">
-        <div class="items-center flex-1/2 bg-white py-16 px-4 rounded-r-[100px]">
-          <h2 class="text-4xl md:text-5xl font-bold mb-6 text-gray-800">
-            Leading the Solar Revolution
-          </h2>
-          <p class="text-xl text-gray-600 mb-6 leading-relaxed">
-            Solartech Energy Systems(Pty) Ltd is a multi-discipline company that specialises
-            in Solar Technolgy. Solartech Energy Systems delivers high quality and reliable
-            Solar Energy services, construction and supplies services to different clients and
-            customers, ranging from individuals to corporations and government sectors at all
-            times.
-          </p>
-          <p class="text-lg text-gray-600 mb-8 leading-relaxed">
-            Our MISSION is to be a globalised producer of clean energy products.
-          </p>
-          <p class="text-lg text-gray-600 mb-8 leading-relaxed">
-            Our VISION is to be the first choice clean energy & reliable power producer.
-          </p>
-        </div>
-        <div class="flex-1/3">
-        </div>
-      </div>
-    </section>
 
     <!-- CTA Section -->
-    <section class="py-20 bg-gradient-to-r from-yellow-500 to-orange-600">
+    <section class="py-20 bg-gradient-to-r from-lime-500 to-green-600">
       <div class="container mx-auto px-6 text-center">
         <h2 class="text-4xl md:text-5xl font-bold mb-6 text-white">
           Ready to Go Solar?
@@ -193,7 +214,7 @@ import cardImage from './screenshot.png'
             Get Free Quote
           </button>
           <button class="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-gray-800 transition-all">
-            Call Now: (555) 123-SOLAR
+            Call Now: (+267) 71257777 / 72622859
           </button>
         </div>
       </div>
@@ -205,11 +226,6 @@ import cardImage from './screenshot.png'
         <div class="grid md:grid-cols-4 gap-8">
           <div>
             <div class="flex items-center space-x-2 mb-6">
-              <div class="w-10 h-10 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center">
-                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM4.332 8.027a6.012 6.012 0 011.912-2.706C6.512 5.73 6.974 6 7.5 6A1.5 1.5 0 019 7.5V8a2 2 0 004 0 2 2 0 011.523-1.943A5.977 5.977 0 0116 10c0 .34-.028.675-.083 1H15a2 2 0 00-2 2v2.197A5.973 5.973 0 0110 16v-2a2 2 0 00-2-2 2 2 0 01-2-2 2 2 0 00-1.668-1.973z" clip-rule="evenodd"/>
-                </svg>
-              </div>
               <span class="text-xl font-bold">Solar Tech System</span>
             </div>
             <p class="text-gray-400 leading-relaxed">
