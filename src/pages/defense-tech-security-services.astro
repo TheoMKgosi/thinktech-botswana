@@ -6,61 +6,78 @@ import '../styles/global.css';
   <head>
     <title>Defense Tech Security Services</title>
     <meta charset="UTF-8" />
-    <meta name="description" content="Keep your data, business, and home secure with Defense Tech. Trusted by thousands." />
+    <meta name="description" content="Defense Tech Security Services offers advanced cybersecurity, alarm response, security guards, and electronic surveillance in Botswana. Protect your assets with professional security solutions." />
+    <meta name="keywords" content="security services, cybersecurity, alarm response, security guards, Botswana, surveillance, PPRA compliance" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
-  <style>
+<style>
   @keyframes glow {
-  0%, 100% {
-    text-shadow: 0 0 5px #ff0000aa, 0 0 10px #ff000099, 0 0 20px #ff000077;
-  }
-  50% {
-    text-shadow: 0 0 10px #ff0000cc, 0 0 20px #ff0000bb, 0 0 30px #ff0000aa;
-  }
+    0%, 100% {
+      text-shadow: 0 0 5px #ff0000aa, 0 0 10px #ff000099, 0 0 20px #ff000077;
+    }
+    50% {
+      text-shadow: 0 0 10px #ff0000cc, 0 0 20px #ff0000bb, 0 0 30px #ff0000aa;
+    }
   }
   .glow-text {
     animation: glow 2s ease-in-out infinite;
   }
   @keyframes bounce {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
   }
   .bounce {
     animation: bounce 1s infinite;
   }
-  </style>
+</style>
+<script type="application/ld+json">
+  {
+     "@context": "https://schema.org",
+     "@type": "SecurityService",
+     "name": "Defense Tech Security Services",
+     "description": "Advanced cybersecurity, alarm response, security guards, and electronic surveillance in Botswana.",
+     "address": {
+       "@type": "PostalAddress",
+       "addressLocality": "Gaborone",
+       "addressCountry": "Botswana"
+     },
+     "telephone": "+267 71257777",
+     "email": "defensetechsecurities@gmail.com",
+     "serviceType": "Security Services"
+   }
+</script>
+  </head>
   <body class="font-sans text-gray-800 bg-white scroll-smooth">
     <nav class="bg-black text-white px-6 flex justify-between items-center fixed w-full top-0 z-50 shadow-md">
       <a href="/"><img src="/thinktech-botswana/defense-security-logo.jpg" alt="defense security logo company" width="90"/></a>
       <ul class="hidden md:flex gap-6 text-sm">
-        <li><a href="#about" class="hover:text-red-500">About</a></li>
-        <li><a href="#services" class="hover:text-red-500">Services</a></li>
-        <li><a href="#contact" class="hover:text-red-500">Contact</a></li>
+        <li><a href="/thinktech-botswana" class="hover:text-red-500">Home</a></li>
+        <li><a href="#about" class="hover:text-red-500">About Us</a></li>
+        <li><a href="#services" class="hover:text-red-500">Our Services</a></li>
+        <li><a href="#contact" class="hover:text-red-500">Contact Us</a></li>
       </ul>
       <a href="#quote" class="bg-red-600 px-4 py-2 rounded-md text-sm hover:bg-red-700 transition">Get a Quote</a>
     </nav>
 
     <!-- Hero section-->
-    <section 
-      class="relative text-white text-center py-20 h-screen transition-all duration-700 hover:bg-gray-900"
-      style="background-image: url('/security-hero.jpg'); background-size: cover; background-position: center;"
-    >
-      <div class="absolute inset-0 bg-black/40"></div> <!-- Dark overlay -->
-      <div class="relative z-10 flex flex-col items-center justify-center h-full px-4">
-        <h1 class="text-4xl md:text-6xl font-bold glow-text">
-          Defense-Tech Security Services
-        </h1>
-        <p class="mt-4 text-lg max-w-xl mx-auto">
-          Protecting people, property, and businesses through expert manpower and advanced technology.
-        </p>
-        <a href="#contact" class="inline-block mt-8 px-8 py-3 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-lg shadow-lg transition bounce">
-          Engage Security
-        </a>
-      </div>
+    <section class="relative text-white text-center py-20 h-screen transition-all duration-700 hover:bg-gray-900"
+             style="background-image: url('/thinktech-botswana/defense-security-logo.jpg'); background-size: cover; background-position: center;" >
+             <div class="absolute inset-0 bg-black/60"></div> <!-- Dark overlay -->
+             <div class="relative z-10 flex flex-col items-center justify-center h-full px-4">
+               <h1 class="text-4xl md:text-6xl font-bold glow-text">
+                 Defense-Tech Security Services
+               </h1>
+               <p class="mt-4 text-lg max-w-xl mx-auto">
+               Protecting people, property, and businesses through expert manpower and advanced technology.
+               </p>
+               <a href="#contact" class="inline-block mt-8 px-8 py-3 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-lg shadow-lg transition bounce">
+                 Secure Your Business Today!
+               </a>
+             </div>
     </section>
 
     <!-- About section -->
@@ -71,21 +88,20 @@ import '../styles/global.css';
         </h2>
         <h3 class="text-xl font-semibold">What drives us</h3>
         <p class="text-lg leading-relaxed max-w-3xl mx-auto">
-          To deliver dependable, professional security solutions
-          through highly trained security personnel and cutting-
-          edge surveillance systems—protecting our clients’ assets,
-          people, and peace of mind with integrity and vigilance.
+        To deliver dependable, professional security solutions
+        through highly trained security personnel and cutting-
+        edge surveillance systems—protecting our clients’ assets,
+        people, and peace of mind with integrity and vigilance.
 
         </p>
         <br />
         <h3 class="text-xl font-semibold">Where we are heading</h3>
         <p class="text-lg max-w-3xl mx-auto">
-          To become a leading name in the security industry by
-          consistently providing trusted manpower and advanced
-          CCTV technologies, setting benchmarks in safety,
-          reliability, and client satisfaction.
+        To become a leading name in the security industry by
+        consistently providing trusted manpower and advanced
+        CCTV technologies, setting benchmarks in safety,
+        reliability, and client satisfaction.
         </p>
-      </div>
     </section>
 
     <!-- Services section -->
@@ -242,12 +258,12 @@ import '../styles/global.css';
 
         <!-- Google Map -->
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7557704.996909897!2d24.6871035!3d-22.342840849999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ea44321d1452211%3A0xf1647c2a8715af7b!2sBotswana!5e0!3m2!1sen!2sbw!4v1751404683879!5m2!1sen!2sbw"
-          class="w-full h-72 mt-12 rounded-lg border-0"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-        ></iframe>
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7557704.996909897!2d24.6871035!3d-22.342840849999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ea44321d1452211%3A0xf1647c2a8715af7b!2sBotswana!5e0!3m2!1sen!2sbw!4v1751404683879!5m2!1sen!2sbw"
+            class="w-full h-72 mt-12 rounded-lg border-0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
       </div>
     </section>
 
@@ -259,7 +275,7 @@ import '../styles/global.css';
         <div>
           <h3 class="text-xl font-bold mb-4">Defense-Tech Security Services</h3>
           <p class="text-gray-400">
-            Fortifying physical infrastructure through advanced defence systems and expert monitoring.
+          Fortifying physical infrastructure through advanced defence systems and expert monitoring.
           </p>
         </div>
 
@@ -312,12 +328,12 @@ import '../styles/global.css';
       </div>
     </footer>
   </body>
-  <script>
+<script>
   // Smooth scrolling for navigation links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
+    anchor.addEventListener('click', function (this: HTMLAnchorElement, e) {
       e.preventDefault();
-      document.querySelector(this.getAttribute('href')).scrollIntoView({
+      document.querySelector(this.hash)?.scrollIntoView({
         behavior: 'smooth'
       });
     });
@@ -340,6 +356,6 @@ import '../styles/global.css';
   document.querySelectorAll('section').forEach(section => {
     observer.observe(section);
   });
-  </script>
-</html>
+</script>
+  </html>
 

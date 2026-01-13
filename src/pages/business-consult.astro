@@ -5,8 +5,10 @@ import '../styles/global.css'
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Business Unlock Consultancy Services</title>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta name="description" content="Business Unlock Consultancy Services provides comprehensive business registration, tax consulting, accounting, and compliance solutions in Botswana. Fast, affordable, and reliable business consulting." />
+     <meta name="keywords" content="business registration, tax consulting, accounting, Botswana, company registration, NGO registration, trade licenses" />
+     <title>Business Unlock Consultancy Services</title>
     <style>
     @keyframes fadeInUp {
     from {
@@ -37,6 +39,22 @@ import '../styles/global.css'
       border: 1px solid rgba(255, 255, 255, 0.2);
     }
     </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Business Unlock Consultancy Services",
+      "description": "Comprehensive business registration, tax consulting, accounting, and compliance solutions in Botswana.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Gaborone",
+        "addressCountry": "Botswana"
+      },
+      "telephone": "+267 71257777",
+      "email": "info.businessunlock@gmail.com",
+      "serviceType": "Business Consulting"
+    }
+    </script>
   </head>
   <body class="font-sans antialiased">
     <!-- Navigation -->
@@ -47,11 +65,13 @@ import '../styles/global.css'
             <img src="/thinktech-botswana/business-unlock-logo.png" alt="business unlock logo" width="100">
           </div>
 
-          <div class="hidden md:flex space-x-8">
-            <a href="#about" class="text-gray-700 hover:text-blue-600 transition-colors duration-300">About</a>
-            <a href="#services" class="text-gray-700 hover:text-blue-600 transition-colors duration-300">Services</a>
-            <a href="#contact" class="text-gray-700 hover:text-blue-600 transition-colors duration-300">Contact</a>
-          </div>
+           <div class="hidden md:flex space-x-8">
+             <a href="/" class="text-gray-700 hover:text-blue-600 transition-colors duration-300">Home</a>
+             <a href="#services" class="text-gray-700 hover:text-blue-600 transition-colors duration-300">Our Services</a>
+             <a href="/#companies" class="text-gray-700 hover:text-blue-600 transition-colors duration-300">Trading As</a>
+             <a href="#about" class="text-gray-700 hover:text-blue-600 transition-colors duration-300">About Us</a>
+             <a href="#contact" class="text-gray-700 hover:text-blue-600 transition-colors duration-300">Contact Us</a>
+           </div>
 
           <button class="md:hidden text-gray-700" id="mobile-menu-btn">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -76,14 +96,15 @@ import '../styles/global.css'
           <p class="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto animate-fadeInUp" style="animation-delay: 0.2s;">
             Strategic consulting solutions that drive growth, optimize operations, and unlock your company's full potential
           </p>
-          <div class="flex flex-col sm:flex-row gap-4 justify-center animate-fadeInUp" style="animation-delay: 0.4s;">
-            <button class="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg">
-              Get Free Consultation
-            </button>
-            <button class="glass-effect text-white font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:bg-white/20">
-              Learn More
-            </button>
-          </div>
+           <div class="flex flex-col sm:flex-row gap-4 justify-center animate-fadeInUp" style="animation-delay: 0.4s;">
+             <button class="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg">
+               Get Your FREE Consultation Today!
+             </button>
+             <p class="text-white/80 text-sm mt-2">Limited free consultations available this month - Don't miss out!</p>
+             <button class="glass-effect text-white font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:bg-white/20">
+               Learn More
+             </button>
+           </div>
         </div>
       </div>
 
@@ -234,12 +255,79 @@ growth.</p>
 including supplies, security, manufacturing, and workshop licenses — saving you time
 and ensuring full compliance.</p>
           </div>
-        </div>
-      </div>
-    </section>
+         </div>
+       </div>
+     </section>
 
+     <!-- Testimonials Section -->
+     <section class="py-20 bg-gray-900 text-white">
+       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+         <div class="text-center mb-16">
+           <h2 class="text-4xl md:text-5xl font-bold mb-6">Client Success Stories</h2>
+           <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+             See how we've helped businesses unlock their full potential
+           </p>
+         </div>
 
-    <!-- Contact Section -->
+         <div class="grid md:grid-cols-2 gap-8">
+           <!-- Testimonial 1 -->
+           <div class="bg-gray-800 p-8 rounded-2xl">
+             <div class="flex items-center mb-4">
+               <div class="w-12 h-12 bg-yellow-500 rounded-full flex items-center justify-center mr-4">
+                 <span class="text-black font-bold text-lg">AB</span>
+               </div>
+               <div>
+                 <h4 class="text-white font-semibold">Alice B.</h4>
+                 <p class="text-gray-400 text-sm">Founder, StartupBotswana</p>
+               </div>
+             </div>
+             <p class="text-gray-300 italic">"Business Unlock made registering my company a breeze. Their guidance through the entire process saved me time and stress. Highly professional!"</p>
+             <div class="flex text-yellow-400 mt-4">
+               ★★★★★
+             </div>
+           </div>
+
+           <!-- Testimonial 2 -->
+           <div class="bg-gray-800 p-8 rounded-2xl">
+             <div class="flex items-center mb-4">
+               <div class="w-12 h-12 bg-yellow-500 rounded-full flex items-center justify-center mr-4">
+                 <span class="text-black font-bold text-lg">MC</span>
+               </div>
+               <div>
+                 <h4 class="text-white font-semibold">Michael C.</h4>
+                 <p class="text-gray-400 text-sm">CFO, TechCorp Botswana</p>
+               </div>
+             </div>
+             <p class="text-gray-300 italic">"Their tax consulting services helped us optimize our compliance and reduce costs. The team's knowledge of Botswana's tax laws is exceptional."</p>
+             <div class="flex text-yellow-400 mt-4">
+               ★★★★★
+             </div>
+           </div>
+         </div>
+
+         <!-- Stats Section -->
+         <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 text-center bg-gray-800 text-white py-12 rounded-2xl">
+           <div>
+             <div class="text-4xl font-bold text-yellow-400">1000+</div>
+             <div class="text-gray-300">Companies Registered</div>
+           </div>
+           <div>
+             <div class="text-4xl font-bold text-yellow-400">95%</div>
+             <div class="text-gray-300">Success Rate</div>
+           </div>
+           <div>
+             <div class="text-4xl font-bold text-yellow-400">5+</div>
+             <div class="text-gray-300">Years Experience</div>
+           </div>
+           <div>
+             <div class="text-4xl font-bold text-yellow-400">24/7</div>
+             <div class="text-gray-300">Customer Support</div>
+           </div>
+         </div>
+       </div>
+     </section>
+
+     <!-- Contact Section -->
     <section id="contact" class="py-20 bg-gray-900 text-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
