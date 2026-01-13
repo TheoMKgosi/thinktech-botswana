@@ -33,13 +33,13 @@ import cardImage from './screenshot.png'
         <img src="/thinktech-botswana/solar-logo.jpg" alt="Solar Tech Energy Systems Logo" width="100" class="pr-2" />
 
          <div class="hidden md:flex items-center space-x-8">
-           <a href="/" class="text-gray-700 hover:text-yellow-600 transition-colors">Home</a>
+           <a href="/thinktech-botswana" class="text-gray-700 hover:text-yellow-600 transition-colors">Home</a>
            <a href="#services" class="text-gray-700 hover:text-yellow-600 transition-colors">Our Services</a>
            <a href="#about" class="text-gray-700 hover:text-yellow-600 transition-colors">About Us</a>
            <a href="#contact" class="text-gray-700 hover:text-yellow-600 transition-colors">Contact Us</a>
-           <button class="bg-gradient-to-r from-green-500 to-green-600 text-white px-6 py-2 rounded-full hover:shadow-lg transition-all">
-             Get Quote
-           </button>
+            <button id="get-quote-header" class="bg-gradient-to-r from-green-500 to-green-600 text-white px-6 py-2 rounded-full hover:shadow-lg transition-all">
+              Get Quote
+            </button>
          </div>
 
         <button class="md:hidden">
@@ -71,10 +71,7 @@ import cardImage from './screenshot.png'
                <button class="bg-white text-gray-800 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-all hover-lift pulse-glow">
                  Start Your Solar Journey Today!
                </button>
-               <p class="text-white/80 text-sm mt-2">Save up to 50% on energy bills - Act now!</p>
-               <button class="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-gray-800 transition-all">
-                 Learn More
-               </button>
+               <p class="text-white/80 text-sm mt-2 content-center">Save on energy bills - Act now!</p>
              </div>
           </div>
 
@@ -158,24 +155,80 @@ Our <span class="font-bold">MISSION</span> is to be a globalised producer of cle
        </div>
      </section>
 
-    <!-- Services -->
-    <section id="services" class="py-20">
-      <h2 class="text-4xl md:text-5xl font-bold mb-6 text-gray-800 text-center">
-        What we offer?
-      </h2>
-      <div class="mx-auto w-max">
-        <ul class="list-image-[url(/thinktech-botswana/checkmark.svg)] ">
-          <li>AC/DC Solar Pump System</li>
-          <li>Home / Farm Off grid System</li>
-          <li>Solar Equipment Sales</li>
-          <li>Solar Panel Installation</li>
-          <li>Solar System Design</li>
-          <li>Water Tests & Soil Tests</li>
-          <li>Net Metering Setup</li>
-          <li>Solar System Maintenace</li>
-        </ul>
-      </div>
-    </section>
+     <!-- Services -->
+     <section id="services" class="py-20">
+       <h2 class="text-4xl md:text-5xl font-bold mb-6 text-gray-800 text-center">
+         What we offer?
+       </h2>
+        <div class="container mx-auto px-6">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="relative bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-all duration-300 cursor-pointer h-20 overflow-visible">
+              <h3 class="service-title text-xl font-semibold mb-2 text-gray-800">
+                AC/DC Solar Pump System
+                <div class="service-overlay absolute top-12 left-0 right-0 bg-white p-4 rounded-b-lg shadow-lg text-gray-600 text-sm opacity-0 transition-opacity duration-300 z-50">
+                  <p>We design, supply, and install AC and DC solar-powered water pumping systems suitable for single-phase and three-phase applications. Our solutions are ideal for boreholes, irrigation, livestock watering, and community water supply projects. The systems are designed based on borehole depth, water demand, pump capacity, and solar availability to ensure efficient and reliable performance with minimal operating costs.</p>
+                </div>
+              </h3>
+            </div>
+            <div class="relative bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-all duration-300 cursor-pointer h-20 overflow-visible">
+              <h3 class="service-title text-xl font-semibold mb-2 text-gray-800">
+                Home / Farm Off grid System
+                <div class="service-overlay absolute top-12 left-0 right-0 bg-white p-4 rounded-b-lg shadow-lg text-gray-600 text-sm opacity-0 transition-opacity duration-300 z-50">
+                  <p>We provide complete off-grid solar power systems for homes and farms that operate independently from the national grid. These systems are capable of powering essential and heavy-duty appliances such as lighting, televisions, refrigerators, freezers, computers, phone chargers, water pumps, electric fences, and selected farm equipment, depending on system size. Each system is carefully designed to meet daily energy needs and ensure reliable power supply.</p>
+                </div>
+              </h3>
+            </div>
+            <div class="relative bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-all duration-300 cursor-pointer h-20 overflow-visible">
+              <h3 class="service-title text-xl font-semibold mb-2 text-gray-800">
+                Solar Equipment Sales
+                <div class="service-overlay absolute top-12 left-0 right-0 bg-white p-4 rounded-b-lg shadow-lg text-gray-600 text-sm opacity-0 transition-opacity duration-300 z-50">
+                  <p>Solartech Energy Systems supplies high-quality solar equipment, including solar panels, inverters (single-phase and three-phase), batteries, charge controllers, mounting structures, and all required accessories. We assist customers in selecting equipment that matches their power requirements and long-term energy goals.</p>
+                </div>
+              </h3>
+            </div>
+            <div class="relative bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-all duration-300 cursor-pointer h-20 overflow-visible">
+              <h3 class="service-title text-xl font-semibold mb-2 text-gray-800">
+                Solar Panel Installation
+                <div class="service-overlay absolute top-12 left-0 right-0 bg-white p-4 rounded-b-lg shadow-lg text-gray-600 text-sm opacity-0 transition-opacity duration-300 z-50">
+                  <p>Our professional installation services ensure correct mounting, optimal panel orientation, and safe electrical connections. We follow industry best practices to maximize energy production, system safety, and durability under local environmental conditions.</p>
+                </div>
+              </h3>
+            </div>
+            <div class="relative bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-all duration-300 cursor-pointer h-20 overflow-visible">
+              <h3 class="service-title text-xl font-semibold mb-2 text-gray-800">
+                Solar System Design
+                <div class="service-overlay absolute top-12 left-0 right-0 bg-white p-4 rounded-b-lg shadow-lg text-gray-600 text-sm opacity-0 transition-opacity duration-300 z-50">
+                  <p>We offer customized solar system designs based on detailed site assessments, energy usage analysis, and future expansion needs. Our designs focus on efficiency, reliability, and cost-effectiveness for residential, agricultural, and commercial applications.</p>
+                </div>
+              </h3>
+            </div>
+            <div class="relative bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-all duration-300 cursor-pointer h-20 overflow-visible">
+              <h3 class="service-title text-xl font-semibold mb-2 text-gray-800">
+                Water Tests & Soil Tests
+                <div class="service-overlay absolute top-12 left-0 right-0 bg-white p-4 rounded-b-lg shadow-lg text-gray-600 text-sm opacity-0 transition-opacity duration-300 z-50">
+                  <p>We conduct water quality and soil condition tests to support the proper selection and performance of solar pumping and irrigation systems. These tests help prevent equipment damage and ensure suitability for agricultural and domestic use.</p>
+                </div>
+              </h3>
+            </div>
+            <div class="relative bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-all duration-300 cursor-pointer h-20 overflow-visible">
+              <h3 class="service-title text-xl font-semibold mb-2 text-gray-800">
+                Net Metering Setup
+                <div class="service-overlay absolute top-12 left-0 right-0 bg-white p-4 rounded-b-lg shadow-lg text-gray-600 text-sm opacity-0 transition-opacity duration-300 z-50">
+                  <p>We assist clients with the complete net metering process, including system sizing, documentation, installation, and compliance. This allows customers to feed excess solar power back into the grid and reduce electricity costs.</p>
+                </div>
+              </h3>
+            </div>
+            <div class="relative bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-all duration-300 cursor-pointer h-20 overflow-visible">
+              <h3 class="service-title text-xl font-semibold mb-2 text-gray-800">
+                Solar System Maintenance
+                <div class="service-overlay absolute top-12 left-0 right-0 bg-white p-4 rounded-b-lg shadow-lg text-gray-600 text-sm opacity-0 transition-opacity duration-300 z-50">
+                  <p>We provide comprehensive maintenance services, including system inspections, panel cleaning, performance monitoring, fault diagnosis, and repairs. Regular maintenance ensures optimal system operation, extends equipment lifespan, and protects your investment.</p>
+                </div>
+              </h3>
+            </div>
+          </div>
+        </div>
+     </section>
 
     <!-- Features Section -->
     <section id="products" class="py-20 bg-white">
@@ -244,9 +297,9 @@ Our <span class="font-bold">MISSION</span> is to be a globalised producer of cle
           Join thousands of satisfied customers who have made the switch to clean, renewable energy. Get your free consultation today.
         </p>
          <div class="flex flex-col sm:flex-row gap-4 justify-center">
-           <button class="bg-white text-gray-800 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-all hover-lift">
-             Get Your FREE Quote Now!
-           </button>
+            <button id="get-quote-cta" class="bg-white text-gray-800 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-all hover-lift">
+              Get Your FREE Quote Now!
+            </button>
            <p class="text-white/80 text-sm mt-2">Special discount for first 10 customers this month</p>
            <button class="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-gray-800 transition-all">
              Call Now: (+267) 71257777 / 72622859
@@ -303,34 +356,133 @@ Our <span class="font-bold">MISSION</span> is to be a globalised producer of cle
           <p>&copy; 2025 Solar Tech System. All rights reserved.</p>
         </div>
       </div>
-    </footer>
+     </footer>
 
-    <script>
-  // Smooth scrolling for navigation links
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (this: HTMLAnchorElement, e) {
-      e.preventDefault();
-      const target = document.querySelector(this.hash);
-      if (target) {
-        target.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
-        });
+     <!-- Quote Modal -->
+     <div id="quote-modal" class="hidden fixed inset-0 bg-black/40 items-center justify-center z-50">
+       <div class="bg-white rounded-lg p-6 w-full max-w-md mx-4">
+         <h3 class="text-2xl font-bold mb-6 text-gray-800">Get Your Quote</h3>
+         <form id="quote-form">
+           <div class="mb-4">
+             <label class="block text-gray-700 font-medium mb-2">Borehole Depth</label>
+             <input type="number" name="depth" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent" placeholder="Enter depth in meters">
+           </div>
+           <div class="mb-4">
+             <label class="block text-gray-700 font-medium mb-2">Borehole Yield</label>
+             <input type="number" name="yield" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent" placeholder="Enter yield in liters per minute">
+           </div>
+           <div class="mb-4">
+             <label class="block text-gray-700 font-medium mb-2">Borehole Location</label>
+             <input type="text" name="location" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent" placeholder="Enter location">
+           </div>
+           <div class="mb-6">
+             <label class="block text-gray-700 font-medium mb-2">Preferred System</label>
+             <select name="system" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent">
+               <option value="">Select preferred system</option>
+               <option value="AC/DC">AC/DC</option>
+               <option value="DC">DC</option>
+               <option value="AC">AC</option>
+             </select>
+           </div>
+           <div class="flex justify-end space-x-3">
+             <button type="button" id="close-modal" class="px-6 py-2 text-gray-600 hover:text-gray-800 transition-colors">Cancel</button>
+             <button type="submit" class="px-6 py-2 bg-gradient-to-r from-green-500 to-green-600 text-white rounded-full hover:shadow-lg transition-all">Submit Quote Request</button>
+           </div>
+         </form>
+       </div>
+     </div>
+
+      <script is:inline>
+   // Smooth scrolling for navigation links
+   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+     anchor.addEventListener('click', function (e) {
+       e.preventDefault();
+       const target = document.querySelector(this.hash);
+       if (target) {
+         target.scrollIntoView({
+           behavior: 'smooth',
+           block: 'start'
+         });
+       }
+     });
+   });
+
+    // Add scroll effect to header
+    window.addEventListener('scroll', () => {
+      const header = document.querySelector('header');
+      if (header) {
+        if (window.scrollY > 100) {
+          header.classList.add('shadow-lg');
+        } else {
+          header.classList.remove('shadow-lg');
+        }
       }
     });
-  });
 
-  // Add scroll effect to header
-  window.addEventListener('scroll', () => {
-    const header = document.querySelector('header');
-    if (header) {
-      if (window.scrollY > 100) {
-        header.classList.add('shadow-lg');
-      } else {
-        header.classList.remove('shadow-lg');
-      }
+    // Service overlay functionality
+    document.querySelectorAll('.service-title').forEach(title => {
+      title.addEventListener('mouseenter', () => {
+        const overlay = title.querySelector('.service-overlay');
+        if (overlay) overlay.classList.add('opacity-100');
+      });
+      title.addEventListener('mouseleave', () => {
+        const overlay = title.querySelector('.service-overlay');
+        if (overlay) overlay.classList.remove('opacity-100');
+      });
+    });
+
+    // Modal functionality
+    const modal = document.getElementById('quote-modal');
+    const closeBtn = document.getElementById('close-modal');
+    const form = document.getElementById('quote-form');
+    const getQuoteHeader = document.getElementById('get-quote-header');
+    const getQuoteCta = document.getElementById('get-quote-cta');
+
+    // Show modal on button clicks
+    if (getQuoteHeader) {
+      getQuoteHeader.addEventListener('click', () => {
+        if (modal) modal.classList.remove('hidden');
+      });
     }
-  });
-    </script>
+
+    if (getQuoteCta) {
+      getQuoteCta.addEventListener('click', () => {
+        if (modal) modal.classList.remove('hidden');
+      });
+    }
+
+    // Close modal
+    if (closeBtn) {
+      closeBtn.addEventListener('click', () => {
+        if (modal) modal.classList.add('hidden');
+      });
+    }
+
+    // Close modal when clicking outside
+    if (modal) {
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+          modal.classList.add('hidden');
+        }
+      });
+    }
+
+    // Handle form submission
+    if (form) {
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const formData = new FormData(form);
+        const data = {
+          depth: formData.get('depth'),
+          yield: formData.get('yield'),
+          location: formData.get('location'),
+          system: formData.get('system')
+        };
+        alert(`Quote request submitted!\nDepth: ${data.depth}\nYield: ${data.yield}\nLocation: ${data.location}\nSystem: ${data.system}`);
+        form.reset();
+        if (modal) modal.classList.add('hidden');
+      });
+    }
+      </script>
   </body>
 </html>

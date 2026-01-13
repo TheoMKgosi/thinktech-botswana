@@ -32,7 +32,38 @@ import { Icon } from 'astro-icon/components'
        }
      }
      </script>
-   </head>
+    </head>
+<style>
+.flip-card {
+  background-color: transparent;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card.flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+</style>
   <body class="bg-gray-900 text-white overflow-x-hidden">
     <!-- Navigation -->
     <nav class="fixed w-full z-50 bg-gray-700/50 backdrop-blur-lg border-b border-gray-800">
@@ -67,7 +98,7 @@ import { Icon } from 'astro-icon/components'
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="min-h-screen bg-[url(/thinktech-botswana/thinktech-logo.jpg)] bg-cover flex items-center justify-center relative">
+    <section id="home" class="min-h-screen bg-[url(/thinktech-botswana/thinktech-logo.jpg)] bg-cover bg-bottom flex items-center justify-center relative">
       <div class="absolute inset-0 bg-black/70"></div>
 
       <!-- Floating Elements -->
@@ -85,21 +116,13 @@ import { Icon } from 'astro-icon/components'
         <p class="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto animate-slide-up" style="animation-delay: 0.3s;">
         Leading the future through three revolutionary companies, each transforming their industries with cutting-edge technology and visionary leadership.
         </p>
-        <div class="flex flex-col sm:flex-row gap-6 justify-center animate-slide-up" style="animation-delay: 0.6s;">
-          <a href="#companies"class="px-8 py-4 bg-gradient-to-r from-primary to-secondary rounded-lg font-semibold hover:shadow-lg hover:shadow-primary/50 transition-all duration-300 transform hover:scale-105">
-            Explore Our Companies
-          </a>
-          <a href="#about" class="px-8 py-4 border-2 border-primary text-primary rounded-lg font-semibold hover:bg-primary hover:text-white transition-all duration-300">
-            Learn More
-          </a>
-        </div>
       </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="py-20 bg-gradient-to-br from-gray-800 to-gray-900">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div class="grid lg:grid-cols-2 gap-16 ">
           <div>
             <div class="mb-8">
               <h2 class="text-4xl md:text-5xl font-bold  bg-primary bg-clip-text text-transparent">
@@ -183,76 +206,166 @@ import { Icon } from 'astro-icon/components'
 
         <div class="grid grid-cols-3 mx-auto gap-8">
           <!-- Service Card 1 -->
-          <div class="px-5 py-7 bg-gray-700 rounded-3xl">
-            <div>
-              <Icon name="mdi:support" size="150" class="mx-auto"/>
+          <div class="flip-card h-80">
+            <div class="flip-card-inner">
+              <div class="flip-card-front flex flex-col h-full px-5 py-7 bg-gray-700 rounded-3xl">
+                <div class="flex-shrink-0">
+                  <Icon name="mdi:support" size="120" class="mx-auto"/>
+                </div>
+                <h3 class="font-semibold mb-3 flex-shrink-0 text-lg">ICT SUPPORT</h3>
+                <p class="text-gray-400  text-sm leading-relaxed line-clamp-2">In the ever evolving world of technology and broad dynamism of ICT we strive to give our customers the best services and support. We offer outcome-driven and precise ICT solutions backed by our expertise and ability to meet set timeframes and thorough requirements engineering. Sethmesh provides End User Help Desk support, End User Systems Training and Organisation ICT Support in general. We are confident that our clients can trust us in these; System analysis, administration and Interaction, Server administration and internet support Structure.</p>
+                <button class="mt-3 text-primary hover:text-secondary transition-colors flip-btn">Read More</button>
+              </div>
+              <div class="flip-card-back flex flex-col h-full px-5 py-7 bg-gray-800 rounded-3xl">
+                <h3 class="text-center font-semibold mb-3 text-primary">ICT SUPPORT</h3>
+                <p class="text-gray-300  text-sm leading-relaxed">In the ever evolving world of technology and broad dynamism of ICT we strive to give our customers the best services and support. We offer outcome-driven and precise ICT solutions backed by our expertise and ability to meet set timeframes and thorough requirements engineering. Sethmesh provides End User Help Desk support, End User Systems Training and Organisation ICT Support in general. We are confident that our clients can trust us in these; System analysis, administration and Interaction, Server administration and internet support Structure.</p>
+                <button class="mt-3 text-primary hover:text-secondary transition-colors flip-btn">Back</button>
+              </div>
             </div>
-            <h3 class="text-center font-semibold mb-5">ICT SUPPORT</h3>
-            <p class="text-gray-400">Providing End User Help Desk support, End User Systems Training and Organisation ICT Support in general.</p>
           </div>
           <!-- Service Card 2 -->
-          <div class="px-5 py-7 bg-gray-700 rounded-3xl">
-            <div>
-              <Icon name="mdi:wrench-cog-outline" size="150" class="mx-auto"/>
+          <div class="flip-card h-80">
+            <div class="flip-card-inner">
+              <div class="flip-card-front flex flex-col h-full px-5 py-7 bg-gray-700 rounded-3xl">
+                <div class="flex-shrink-0">
+                  <Icon name="mdi:wrench-cog-outline" size="120" class="mx-auto"/>
+                </div>
+                <h3 class="text-center font-semibold mb-3 flex-shrink-0 text-lg">HARDWARE REPAIRS AND SOFTWARE CONFIGURATION</h3>
+                <p class="text-gray-400  text-sm leading-relaxed line-clamp-2">Thinktech Innovation Botswanais the answer to all your hardware (computers, laptops, Nisca printers, and smart source) repairs as well software configurations (windows, mac, software programs and application programs). We handle all the software and hardware needs.</p>
+                <button class="mt-3 text-primary hover:text-secondary transition-colors flip-btn">Read More</button>
+              </div>
+              <div class="flip-card-back flex flex-col h-full px-5 py-7 bg-gray-800 rounded-3xl">
+                <h3 class="text-center font-semibold mb-3 text-primary">HARDWARE REPAIRS AND SOFTWARE CONFIGURATION</h3>
+                <p class="text-gray-300  text-sm leading-relaxed">Thinktech Innovation Botswanais the answer to all your hardware (computers, laptops, Nisca printers, and smart source) repairs as well software configurations (windows, mac, software programs and application programs). We handle all the software and hardware needs.</p>
+                <button class="mt-3 text-primary hover:text-secondary transition-colors flip-btn">Back</button>
+              </div>
             </div>
-            <h3 class="text-center font-semibold mb-5">HARDWARE REPAIRS AND SOFTWARE CONFIGURATION</h3>
-            <p class="text-gray-400">Provides complete solutions for all hardware repairs and software configurations, covering computers, laptops, printers, and application programs.</p>
           </div>
           <!-- Service Card 3 -->
-          <div class="px-5 py-7 bg-gray-700 rounded-3xl">
-            <div>
-              <Icon name="mdi:database-arrow-up-outline" size="150" class="mx-auto"/>
+          <div class="flip-card h-80">
+            <div class="flip-card-inner">
+              <div class="flip-card-front flex flex-col h-full px-5 py-7 bg-gray-700 rounded-3xl">
+                <div class="flex-shrink-0">
+                  <Icon name="mdi:database-arrow-up-outline" size="120" class="mx-auto"/>
+                </div>
+                <h3 class="text-center font-semibold mb-3 flex-shrink-0 text-lg">DATA MANAGEMENT</h3>
+                <p class="text-gray-400  text-sm leading-relaxed line-clamp-2">Data Recovery,Back up and Management are very important parts of every organisation. Data must be protected from landing in the wrong hands at all costs. We help companies, firms and institutions in acquiring, storing, protecting, processing required data to ensure the accessibility, reliability, and timeliness of the data for its users. We also do data deletion, hard drive data wipe and sanitization, capable of doing mass data destructions in case where data is no longer needed.</p>
+                <button class="mt-3 text-primary hover:text-secondary transition-colors flip-btn">Read More</button>
+              </div>
+              <div class="flip-card-back flex flex-col h-full px-5 py-7 bg-gray-800 rounded-3xl">
+                <h3 class="text-center font-semibold mb-3 text-primary">DATA MANAGEMENT</h3>
+                <p class="text-gray-300  text-sm leading-relaxed">Data Recovery,Back up and Management are very important parts of every organisation. Data must be protected from landing in the wrong hands at all costs. We help companies, firms and institutions in acquiring, storing, protecting, processing required data to ensure the accessibility, reliability, and timeliness of the data for its users. We also do data deletion, hard drive data wipe and sanitization, capable of doing mass data destructions in case where data is no longer needed.</p>
+                <button class="mt-3 text-primary hover:text-secondary transition-colors flip-btn">Back</button>
+              </div>
             </div>
-            <h3 class="text-center font-semibold mb-5">DATA MANAGEMENT</h3>
-            <p class="text-gray-400">We help organisations securely manage, protect, and process their data while ensuring accessibility and reliability, including services like data recovery, backup, deletion, and mass sanitization.</p>
           </div>
           <!-- Service Card 4 -->
-          <div class="px-5 py-7 bg-gray-700 rounded-3xl">
-            <div>
-              <Icon name="mdi:remote-desktop" size="150" class="mx-auto"/>
+          <div class="flip-card h-80">
+            <div class="flip-card-inner">
+              <div class="flip-card-front flex flex-col h-full px-5 py-7 bg-gray-700 rounded-3xl">
+                <div class="flex-shrink-0">
+                  <Icon name="mdi:remote-desktop" size="120" class="mx-auto"/>
+                </div>
+                <h3 class="text-center font-semibold mb-3 flex-shrink-0 text-lg">DESKTOP MANAGEMENT SERVICES</h3>
+                <p class="text-gray-400  text-sm leading-relaxed line-clamp-2">We have the ability to automate, standardize, secure, and audit all the computing devices within any organisational setup. Our staff is well trained to standardize user workspaces, support users remotely,ensure users meet IT department SLAs, improve self service, protect sensitive data, remove spyware and so forth.</p>
+                <button class="mt-3 text-primary hover:text-secondary transition-colors flip-btn">Read More</button>
+              </div>
+              <div class="flip-card-back flex flex-col h-full px-5 py-7 bg-gray-800 rounded-3xl">
+                <h3 class="text-center font-semibold mb-3 text-primary">DESKTOP MANAGEMENT SERVICES</h3>
+                <p class="text-gray-300  text-sm leading-relaxed">We have the ability to automate, standardize, secure, and audit all the computing devices within any organisational setup. Our staff is well trained to standardize user workspaces, support users remotely,ensure users meet IT department SLAs, improve self service, protect sensitive data, remove spyware and so forth.</p>
+                <button class="mt-3 text-primary hover:text-secondary transition-colors flip-btn">Back</button>
+              </div>
             </div>
-            <h3 class="text-center font-semibold mb-5">DESKTOP MANAGEMENT SERVICES</h3>
-            <p class="text-gray-400">We have the ability to automate, standardize, secure, and audit all the computing devices within any organisational setup. Our staff is well trained to standardize user workspaces, support users remotely,ensure users meet IT department SLAs, improve self service, protect sensitive data, remove spyware and so forth.</p>
           </div>
           <!-- Service Card 5 -->
-          <div class="px-5 py-7 bg-gray-700 rounded-3xl">
-            <div>
-              <Icon name="mdi:database-arrow-up-outline" size="150" class="mx-auto"/>
+          <div class="flip-card h-80">
+            <div class="flip-card-inner">
+              <div class="flip-card-front flex flex-col h-full px-5 py-7 bg-gray-700 rounded-3xl">
+                <div class="flex-shrink-0">
+                  <Icon name="mdi:database-arrow-up-outline" size="120" class="mx-auto"/>
+                </div>
+                <h3 class="text-center font-semibold mb-3 flex-shrink-0 text-lg">NETWORK & SERVER MANAGEMENT</h3>
+                <p class="text-gray-400  text-sm leading-relaxed line-clamp-2">We pride ourselves in exceptional service of administering networks and servers, managing, and operating data networks, fault analysis, performance management, provisioning of networks &amp server as well as maintaining quality of service using a network management system and server administration skills . Modern network management systems use software and hardware to constantly collect and analyse data and push out configuration changes for improving performance, reliability, and security.</p>
+                <button class="mt-3 text-primary hover:text-secondary transition-colors flip-btn">Read More</button>
+              </div>
+              <div class="flip-card-back flex flex-col h-full px-5 py-7 bg-gray-800 rounded-3xl">
+                <h3 class="text-center font-semibold mb-3 text-primary">NETWORK & SERVER MANAGEMENT</h3>
+                <p class="text-gray-300  text-sm leading-relaxed overflow-auto">We pride ourselves in exceptional service of administering networks and servers, managing, and operating data networks, fault analysis, performance management, provisioning of networks &amp server as well as maintaining quality of service using a network management system and server administration skills . Modern network management systems use software and hardware to constantly collect and analyse data and push out configuration changes for improving performance, reliability, and security.</p>
+                <button class="mt-3 text-primary hover:text-secondary transition-colors flip-btn">Back</button>
+              </div>
             </div>
-            <h3 class="text-center font-semibold mb-5">NETWORK & SERVER MANAGEMENT</h3>
-            <p class="text-gray-400">We specialise in network and server administration, ensuring optimal performance, fault management, and quality of service through advanced network management systems.</p>
           </div>
           <!-- Service Card 6 -->
-          <div class="px-5 py-7 bg-gray-700 rounded-3xl">
-            <div>
-              <Icon name="mdi:security" size="150" class="mx-auto"/>
+          <div class="flip-card h-80">
+            <div class="flip-card-inner">
+              <div class="flip-card-front flex flex-col h-full px-5 py-7 bg-gray-700 rounded-3xl">
+                <div class="flex-shrink-0">
+                  <Icon name="mdi:security" size="120" class="mx-auto"/>
+                </div>
+                <h3 class="text-center font-semibold mb-3 flex-shrink-0 text-lg">ICT SECURITY AND RISK MANAGEMENT</h3>
+                <p class="text-gray-400  text-sm leading-relaxed line-clamp-2">We take pride in knowing that your establishment or organisation has a watertight ICT security and risk mitigation policy. Trust us to take care of your security infrastructure, policy enforcement and prevention of data breaches. We also have experience in assessing and mitigating the impact of loss in all your business or organisational ICT assets.</p>
+                <button class="mt-3 text-primary hover:text-secondary transition-colors flip-btn">Read More</button>
+              </div>
+              <div class="flip-card-back flex flex-col h-full px-5 py-7 bg-gray-800 rounded-3xl">
+                <h3 class="text-center font-semibold mb-3 text-primary">ICT SECURITY AND RISK MANAGEMENT</h3>
+                <p class="text-gray-300  text-sm leading-relaxed">We take pride in knowing that your establishment or organisation has a watertight ICT security and risk mitigation policy. Trust us to take care of your security infrastructure, policy enforcement and prevention of data breaches. We also have experience in assessing and mitigating the impact of loss in all your business or organisational ICT assets.</p>
+                <button class="mt-3 text-primary hover:text-secondary transition-colors flip-btn">Back</button>
+              </div>
             </div>
-            <h3 class="text-center font-semibold mb-5">ICT SECURITY AND RISK MANAGEMENT</h3>
-            <p class="text-gray-400">We ensure your organisation has robust ICT security and risk mitigation, managing infrastructure, enforcing policies, and preventing data breaches.</p>
           </div>
           <!-- Service Card 7 -->
-          <div class="px-5 py-7 bg-gray-700 rounded-3xl">
-            <div>
-              <Icon name="mdi:server" size="150" class="mx-auto"/>
+          <div class="flip-card h-80">
+            <div class="flip-card-inner">
+              <div class="flip-card-front flex flex-col h-full px-5 py-7 bg-gray-700 rounded-3xl">
+                <div class="flex-shrink-0">
+                  <Icon name="mdi:server" size="120" class="mx-auto"/>
+                </div>
+                <h3 class="text-center font-semibold mb-3 flex-shrink-0 text-lg">IMAGING, MIGRATION & HOSTING SERVICES</h3>
+                <p class="text-gray-400  text-sm leading-relaxed line-clamp-2">Thinktech Innovation Botswanaalso prides itself with provision of web hosting, offsite backups and virtual desktops for its customers. We also provide secure information migration and workstation imaging of each individual desktop in the organisation through use of efficient software and imaging tools.</p>
+                <button class="mt-3 text-primary hover:text-secondary transition-colors flip-btn">Read More</button>
+              </div>
+              <div class="flip-card-back flex flex-col h-full px-5 py-7 bg-gray-800 rounded-3xl">
+                <h3 class="text-center font-semibold mb-3 text-primary">IMAGING, MIGRATION & HOSTING SERVICES</h3>
+                <p class="text-gray-300  text-sm leading-relaxed">Thinktech Innovation Botswanaalso prides itself with provision of web hosting, offsite backups and virtual desktops for its customers. We also provide secure information migration and workstation imaging of each individual desktop in the organisation through use of efficient software and imaging tools.</p>
+                <button class="mt-3 text-primary hover:text-secondary transition-colors flip-btn">Back</button>
+              </div>
             </div>
-            <h3 class="text-center font-semibold mb-5">IMAGING, MIGRATION & HOSTING SERVICES</h3>
-            <p class="text-gray-400">We offers web hosting, offsite backups, and virtual desktops, ensuring secure information migration and workstation imaging for every desktop using efficient tools.</p>
           </div>
           <!-- Service Card 8 -->
-          <div class="px-5 py-7 bg-gray-700 rounded-3xl">
-            <div>
-              <Icon name="mdi:developer-board" size="150" class="mx-auto"/>
+          <div class="flip-card h-80">
+            <div class="flip-card-inner">
+              <div class="flip-card-front flex flex-col h-full px-5 py-7 bg-gray-700 rounded-3xl">
+                <div class="flex-shrink-0">
+                  <Icon name="mdi:developer-board" size="120" class="mx-auto"/>
+                </div>
+                <h3 class="text-center font-semibold mb-3 flex-shrink-0 text-lg">SOFTWARE DEVELOPMENT & MAINTENANCE</h3>
+                <p class="text-gray-400  text-sm leading-relaxed line-clamp-2">Thinktech Innovation Botswana has a team of experienced experts that are capable of planning, designing, testing, and implementing new software applications or programs tailored to meet customer needs. We also do internal development of customized systems, the creation of database systems, and the acquisition of third party developed software.</p>
+                <button class="mt-3 text-primary hover:text-secondary transition-colors flip-btn">Read More</button>
+              </div>
+              <div class="flip-card-back flex flex-col h-full px-5 py-7 bg-gray-800 rounded-3xl">
+                <h3 class="text-center font-semibold mb-3 text-primary">SOFTWARE DEVELOPMENT & MAINTENANCE</h3>
+                <p class="text-gray-300  text-sm leading-relaxed">Thinktech Innovation Botswana has a team of experienced experts that are capable of planning, designing, testing, and implementing new software applications or programs tailored to meet customer needs. We also do internal development of customized systems, the creation of database systems, and the acquisition of third party developed software.</p>
+                <button class="mt-3 text-primary hover:text-secondary transition-colors flip-btn">Back</button>
+              </div>
             </div>
-            <h3 class="text-center font-semibold mb-5">SOFTWARE DEVELOPMENT & MAINTENANCE</h3>
-            <p class="text-gray-400">Providing End User Help Desk support, End User Systems Training and Organisation ICT Support in general.</p>
           </div>
           <!-- Service Card 9 -->
-          <div class="px-5 py-7 bg-gray-700 rounded-3xl">
-            <div>
-              <Icon name="mdi:truck-cargo-container" size="150" class="mx-auto"/>
+          <div class="flip-card h-80">
+            <div class="flip-card-inner">
+              <div class="flip-card-front flex flex-col h-full px-5 py-7 bg-gray-700 rounded-3xl">
+                <div class="flex-shrink-0">
+                  <Icon name="mdi:truck-cargo-container" size="120" class="mx-auto"/>
+                </div>
+                <h3 class="text-center font-semibold mb-3 flex-shrink-0 text-lg">ICT SUPPLIES AND CONSUMABLES</h3>
+                <p class="text-gray-400 text-sm leading-relaxed line-clamp-2">Thinktech Innovation Botswana Pty Ltd stands out as the best suppliers in the following; Computers and Laptops, Printers, Fax Machines, Cables, Hard Disk Drives, RAM, Cartridges, toners, Memory sticks, CCTV Cameras and many more.</p>
+                <button class="mt-3 text-primary hover:text-secondary transition-colors flip-btn">Read More</button>
+              </div>
+              <div class="flip-card-back flex flex-col h-full px-5 py-7 bg-gray-800 rounded-3xl">
+                <h3 class="text-center font-semibold mb-3 text-primary">ICT SUPPLIES AND CONSUMABLES</h3>
+                <p class="text-gray-300 text-sm leading-relaxed">Thinktech Innovation Botswana Pty Ltd stands out as the best suppliers in the following; Computers and Laptops, Printers, Fax Machines, Cables, Hard Disk Drives, RAM, Cartridges, toners, Memory sticks, CCTV Cameras and many more.</p>
+                <button class="mt-3 text-primary hover:text-secondary transition-colors flip-btn">Back</button>
+              </div>
             </div>
-            <h3 class="text-center font-semibold mb-5">ICT SUPPLIES AND CONSUMABLES</h3>
-            <p class="text-gray-400">Providing End User Help Desk support, End User Systems Training and Organisation ICT Support in general.</p>
           </div>
         </div>
       </div>
@@ -268,7 +381,7 @@ import { Icon } from 'astro-icon/components'
             Our Portfolio
           </h2>
           <p class="text-xl text-gray-300 max-w-3xl mx-auto">
-          Three innovative companies pushing the boundaries of what's possible in their respective fields.
+          Thinktech Innovation expands beyong ICT services, we offer various services under our roof
           </p>
         </div>
 
@@ -568,6 +681,16 @@ import { Icon } from 'astro-icon/components'
 
   document.querySelectorAll('section').forEach(section => {
     observer.observe(section);
+  });
+
+  // Flip card functionality for service cards
+  document.querySelectorAll('.flip-btn').forEach(button => {
+    button.addEventListener('click', function() {
+      const card = this.closest('.flip-card');
+      if (card) {
+        card.classList.toggle('flipped');
+      }
+    });
   });
 </script>
   </html>
