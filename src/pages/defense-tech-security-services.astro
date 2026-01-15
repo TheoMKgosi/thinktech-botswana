@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import { Icon } from 'astro-icon/components'
 ---
 
 <html lang="en">
@@ -33,6 +34,58 @@ import '../styles/global.css';
   .bounce {
     animation: bounce 1s infinite;
   }
+
+  /* Flip card styles */
+  .flip-card {
+    background-color: transparent;
+    perspective: 1000px;
+    height: 350px;
+  }
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+  .flip-card-inner.flipped {
+    transform: rotateY(180deg);
+  }
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    border: 1px solid #e5e7eb;
+    padding: 24px;
+  }
+  .flip-card-back {
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9fafb;
+  }
+  .read-more {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    background-color: #3b82f6;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  .read-more:hover {
+    background-color: #2563eb;
+  }
 </style>
 <script type="application/ld+json">
   {
@@ -52,38 +105,36 @@ import '../styles/global.css';
 </script>
   </head>
   <body class="font-sans text-gray-800 bg-white scroll-smooth">
-    <nav class="bg-black text-white px-6 flex justify-between items-center fixed w-full top-0 z-50 shadow-md">
-      <p class="p-3 font-bold">Defense-Tech Security Services</p>
+    <nav class="bg-black text-white px-6 flex justify-between items-center fixed w-full top-0 z-50 shadow-md p-4">
       <ul class="hidden md:flex gap-6 text-sm">
-        <li><a href="/thinktech-botswana" class="hover:text-blue-500">Home</a></li>
-        <li><a href="#about" class="hover:text-blue-500">About Us</a></li>
-        <li><a href="#services" class="hover:text-blue-500">Our Services</a></li>
-        <li><a href="#contact" class="hover:text-blue-500">Contact Us</a></li>
+        <li><a href="/thinktech-botswana" class="hover:text-blue-500 font-semibold">Home</a></li>
+        <li><a href="#about" class="hover:text-blue-500 font-semibold">About Us</a></li>
+        <li><a href="#services" class="hover:text-blue-500 font-semibold">Our Services</a></li>
+        <li><a href="#contact" class="hover:text-blue-500 font-semibold">Contact Us</a></li>
       </ul>
     </nav>
 
     <!-- Hero section-->
-    <section class="relative text-white text-center py-20 h-screen transition-all duration-700 hover:bg-gray-900"
-             style="background-image: url('/thinktech-botswana/defense-security-logo.jpg'); background-size: cover; background-position: center;" >
-             <div class="absolute inset-0 bg-black/60"></div> <!-- Dark overlay -->
-             <div class="relative z-10 flex flex-col items-center justify-center h-full px-4">
-               <h1 class="text-4xl md:text-6xl font-bold glow-text">
-                 Defense-Tech Security Services
-               </h1>
-               <p class="mt-4 text-lg max-w-xl mx-auto">
-               Protecting people, property, and businesses through expert manpower and advanced technology.
-               </p>
-               <a href="#contact" class="inline-block mt-8 px-8 py-3 bg-blue-800 hover:bg-blue-700 text-white font-semibold rounded-lg shadow-lg transition bounce">
-                 Secure Your Business Today!
-               </a>
-             </div>
+    <section class="relative text-white flex text-center justify-center min-h-screen bg-[url(/thinktech-botswana/defense-security-logo.jpg)] bg-center bg-auto bg-white bg-no-repeat">
+      <div class="absolute inset-0 bg-black/60"></div> <!-- Dark overlay -->
+      <div class="relative z-10 my-auto px-4">
+        <h1 class="text-4xl md:text-6xl font-bold glow-text">
+          Defense-Tech Security Services
+        </h1>
+        <p class="mt-4 text-lg max-w-xl mx-auto">
+        Protecting people, property, and businesses through expert manpower and advanced technology.
+        </p>
+        <a href="#contact" class="inline-block mt-8 px-8 py-3 bg-blue-800 hover:bg-blue-700 text-white font-semibold rounded-lg shadow-lg transition bounce">
+          Secure Your Business Today!
+        </a>
+      </div>
     </section>
 
     <!-- About section -->
     <section id="about" class="bg-gray-100 text-gray-900 py-20 px-6 md:px-16">
       <div class="max-w-5xl mx-auto text-center">
         <h2 class="text-3xl md:text-5xl font-bold mb-6 border-b-blue-500 border-b-2 w-auto">
-          About SecureX
+          About Us
         </h2>
         <h3 class="text-xl font-semibold">What drives us</h3>
         <p class="text-lg leading-relaxed max-w-3xl mx-auto">
@@ -113,55 +164,148 @@ import '../styles/global.css';
         <div class="grid gap-10 grid-cols-2 text-center">
 
           <!-- Alarm Response -->
-          <div class="p-6 border rounded-lg shadow hover:shadow-lg transition">
-            <!-- radar-svgrepo-com.svg -->
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" stroke="currentColor" class="text-blue-800 mx-auto" height="100">
-              <circle cx="32" cy="32" r="30" stroke-width="4"/>
-              <path d="M32 32 L54 10" stroke="currentColor" stroke-width="4"/>
-              <circle cx="32" cy="32" r="6" fill="currentColor"/>
-            </svg>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <!-- radar-svgrepo-com.svg -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" stroke="currentColor" class="text-blue-800 mx-auto" height="100">
+                  <circle cx="32" cy="32" r="30" stroke-width="4"/>
+                  <path d="M32 32 L54 10" stroke="currentColor" stroke-width="4"/>
+                  <circle cx="32" cy="32" r="6" fill="currentColor"/>
+                </svg>
 
-            <h3 class="text-xl font-semibold mb-2">Alarm Response</h3>
-            <p class="text-gray-700">We provide a full range of security solutions designed to protect people, property, and assets — from on-site personnel to advanced electronic systems.</p>
+                <h3 class="text-xl font-semibold mb-2">SECURITY GUARD & PATROL SERVICES</h3>
+                <p class="text-gray-700 line-clamp-4 ">Security Guard & Patrol Services - Defense-Tech Security Services provides professional, reliable security guard and patrol services designed to protect people, property, and assets. Our licensed guards are trained to handle a wide range of security challenges with a strong focus on prevention, quick response, and customer service. We offer; Uniformed Armed & Unarmed Guards, 24/7 Mobile Patrols (Vehicle & Foot Patrols), Access Control & Entry Point Monitoring, Surveillance Support & Incident Reporting, Custom Security Plans for Commercial, Residential, and Industrial Sites.</p>
+                <button class="read-more">Read More</button>
+              </div>
+              <div class="flip-card-back">
+                <h3 class="text-xl font-semibold mb-4">SECURITY GUARD & PATROL SERVICES</h3>
+                <p class="text-gray-700 text-center">Security Guard & Patrol Services - Defense-Tech Security Services provides professional, reliable security guard and patrol services designed to protect people, property, and assets. Our licensed guards are trained to handle a wide range of security challenges with a strong focus on prevention, quick response, and customer service. We offer; Uniformed Armed & Unarmed Guards, 24/7 Mobile Patrols (Vehicle & Foot Patrols), Access Control & Entry Point Monitoring, Surveillance Support & Incident Reporting, Custom Security Plans for Commercial, Residential, and Industrial Sites.</p>
+              </div>
+            </div>
           </div>
 
           <!-- Security Guards -->
-          <div class="p-6 border rounded-lg shadow hover:shadow-lg transition">
-            <!-- network-svgrepo-com.svg -->
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" stroke="currentColor" class="text-blue-800 mx-auto" height="100">
-              <circle cx="12" cy="32" r="6" stroke-width="3" fill="white"/>
-              <circle cx="52" cy="12" r="6" stroke-width="3" fill="white"/>
-              <circle cx="52" cy="52" r="6" stroke-width="3" fill="white"/>
-              <line x1="18" y1="32" x2="46" y2="12" stroke="currentColor" stroke-width="3"/>
-              <line x1="18" y1="32" x2="46" y2="52" stroke="currentColor" stroke-width="3"/>
-            </svg>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <!-- network-svgrepo-com.svg -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" stroke="currentColor" class="text-blue-800 mx-auto" height="100">
+                  <circle cx="12" cy="32" r="6" stroke-width="3" fill="white"/>
+                  <circle cx="52" cy="12" r="6" stroke-width="3" fill="white"/>
+                  <circle cx="52" cy="52" r="6" stroke-width="3" fill="white"/>
+                  <line x1="18" y1="32" x2="46" y2="12" stroke="currentColor" stroke-width="3"/>
+                  <line x1="18" y1="32" x2="46" y2="52" stroke="currentColor" stroke-width="3"/>
+                </svg>
 
-            <h3 class="text-xl font-semibold mb-2">Security Guards</h3>
-            <p class="text-gray-700">Professionally trained, PSIRA/PPRA-certified guards for commercial, residential, and event protection. We tailor staffing to your risk profile.</p>
+                <h3 class="text-xl font-semibold mb-2">EVENT SECURITY & MARSHALL</h3>
+                <p class="text-gray-700 line-clamp-4">At Defense-Tech Security Services, we specialize in providing comprehensive event security and marshal services to ensure the safety and smooth operation of events of all sizes. Whether it's a corporate function, concert, festival, sporting event, or private gathering, our trained personnel are equipped to manage crowds, control access, and respond swiftly to any incidents. Our services include; Event Security Planning & Risk Assessment, Crowd Control & Entry Point Management, Uniformed Event Marshals & Stewards and VIP Protection & Backstage Security</p>
+                <button class="read-more">Read More</button>
+              </div>
+              <div class="flip-card-back">
+                <h3 class="text-xl font-semibold mb-4">EVENT SECURITY & MARSHALL</h3>
+                <p class="text-gray-700 text-center">At Defense-Tech Security Services, we specialize in providing comprehensive event security and marshal services to ensure the safety and smooth operation of events of all sizes. Whether it's a corporate function, concert, festival, sporting event, or private gathering, our trained personnel are equipped to manage crowds, control access, and respond swiftly to any incidents. Our services include; Event Security Planning & Risk Assessment, Crowd Control & Entry Point Management, Uniformed Event Marshals & Stewards and VIP Protection & Backstage Security</p>
+              </div>
+            </div>
           </div>
 
           <!-- Electronic Security -->
-          <div class="p-6 border rounded-lg shadow hover:shadow-lg transition">
-            <!-- shield-flash-svgrepo-com.svg -->
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" stroke="currentColor" class="text-blue-800 mx-auto" height="100">
-              <path d="M32 4 L8 12 V28 C8 44 32 60 32 60 C32 60 56 44 56 28 V12 L32 4 Z" stroke-width="3" fill="white"/>
-              <path d="M30 20 L36 20 L32 30 H38 L28 44 L30 32 H24 Z" fill="currentColor"/>
-            </svg>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <!-- shield-flash-svgrepo-com.svg -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" stroke="currentColor" class="text-blue-800 mx-auto" height="100">
+                  <path d="M32 4 L8 12 V28 C8 44 32 60 32 60 C32 60 56 44 56 28 V12 L32 4 Z" stroke-width="3" fill="white"/>
+                  <path d="M30 20 L36 20 L32 30 H38 L28 44 L30 32 H24 Z" fill="currentColor"/>
+                </svg>
 
-            <h3 class="text-xl font-semibold mb-2">Electronic Security</h3>
-            <p class="text-gray-700">Cutting-edge surveillance, intrusion detection, and access control systems. We design, install, and maintain custom setups for any environment.</p>
+                <h3 class="text-xl font-semibold mb-2">ELECTRONIC SECURITY SERVICES</h3>
+                <p class="text-gray-700 line-clamp-4">CCTV Installation & Maintenance -  we offer advanced CCTV installation and maintenance solutions designed to enhance surveillance, deter criminal activity, and provide real-time monitoring of your property. Our systems are tailored to suit residential, commercial, and industrial environments, ensuring maximum coverage and reliability. Our services include: Professional Installation of CCTV Cameras (Indoor & Outdoor), Networked Surveillance Systems with Remote Viewing, System Upgrades & Integration with Existing Security Systems, Preventative Maintenance & Troubleshooting, 24/7 Monitoring Options (Optional Service) and Motion Detection, Night Vision & HD Recording Capabilities</p>
+                <button class="read-more">Read More</button>
+              </div>
+              <div class="flip-card-back">
+                <h3 class="text-xl font-semibold mb-4">ELECTRONIC SECURITY SERVICES</h3>
+                <p class="text-gray-700 text-center">CCTV Installation & Maintenance -  we offer advanced CCTV installation and maintenance solutions designed to enhance surveillance, deter criminal activity, and provide real-time monitoring of your property. Our systems are tailored to suit residential, commercial, and industrial environments, ensuring maximum coverage and reliability. Our services include: Professional Installation of CCTV Cameras (Indoor & Outdoor), Networked Surveillance Systems with Remote Viewing, System Upgrades & Integration with Existing Security Systems, Preventative Maintenance & Troubleshooting, 24/7 Monitoring Options (Optional Service) and Motion Detection, Night Vision & HD Recording Capabilities</p>
+              </div>
+            </div>
           </div>
 
           <!-- PPRA Compliance & Consulting -->
-          <div class="p-6 border rounded-lg shadow hover:shadow-lg transition">
-            <!-- shield-flash-svgrepo-com.svg -->
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" stroke="currentColor" class="text-blue-800 mx-auto" height="100">
-              <path d="M32 4 L8 12 V28 C8 44 32 60 32 60 C32 60 56 44 56 28 V12 L32 4 Z" stroke-width="3" fill="white"/>
-              <path d="M30 20 L36 20 L32 30 H38 L28 44 L30 32 H24 Z" fill="currentColor"/>
-            </svg>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <!-- shield-flash-svgrepo-com.svg -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" stroke="currentColor" class="text-blue-800 mx-auto" height="100">
+                  <path d="M32 4 L8 12 V28 C8 44 32 60 32 60 C32 60 56 44 56 28 V12 L32 4 Z" stroke-width="3" fill="white"/>
+                  <path d="M30 20 L36 20 L32 30 H38 L28 44 L30 32 H24 Z" fill="currentColor"/>
+                </svg>
 
-            <h3 class="text-xl font-semibold mb-2">PPRA Compliance & Consulting</h3>
-            <p class="text-gray-700">Guidance and support to help your organisation meet Private Security Regulatory Authority (PPRA) requirements - licensing, audits, and compliance documentation.</p>
+                <h3 class="text-xl font-semibold mb-2">Security Alarm System</h3>
+                <p class="text-gray-700 line-clamp-4">Defense-Tech Security Services provides dependable supply & fit security alarm solutions designed to detect threats, deter intruders, and protect your property 24/7. Whether you’re securing a home, office, or industrial site, we offer high-quality alarm systems along with expert repair and maintenance services. Our services include: Supply & Installation of Intruder Alarm Systems, Wired & Wireless Alarm Options, Alarm System Troubleshooting & Repairs, Routine Maintenance & Testing and Emergency Call-Outs for Faulty Alarms</p>
+                <button class="read-more">Read More</button>
+              </div>
+              <div class="flip-card-back">
+                <h3 class="text-xl font-semibold mb-4">Security Alarm System</h3>
+                <p class="text-gray-700 text-center">Defense-Tech Security Services provides dependable supply & fit security alarm solutions designed to detect threats, deter intruders, and protect your property 24/7. Whether you’re securing a home, office, or industrial site, we offer high-quality alarm systems along with expert repair and maintenance services. Our services include: Supply & Installation of Intruder Alarm Systems, Wired & Wireless Alarm Options, Alarm System Troubleshooting & Repairs, Routine Maintenance & Testing and Emergency Call-Outs for Faulty Alarms</p>
+              </div>
+            </div>
+          </div>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <!-- shield-flash-svgrepo-com.svg -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" stroke="currentColor" class="text-blue-800 mx-auto" height="100">
+                  <path d="M32 4 L8 12 V28 C8 44 32 60 32 60 C32 60 56 44 56 28 V12 L32 4 Z" stroke-width="3" fill="white"/>
+                  <path d="M30 20 L36 20 L32 30 H38 L28 44 L30 32 H24 Z" fill="currentColor"/>
+                </svg>
+
+                <h3 class="text-xl font-semibold mb-2">Access Control / Intrusion Detection</h3>
+                <p class="text-gray-700 line-clamp-4">At Defense-Tech Security Services, we provide advanced access control and intrusion detection solutions designed to prevent unauthorized entry, protect sensitive areas, and enhance overall site security. Our systems are scalable and suitable for residential, commercial, and high-security environments. Our services include: Installation of Keycard, Keypad, Biometric & RFID Systems, Door Entry & Gate Access Control Solutions, Intrusion Detection Systems with Real-Time Alerts, Integration with CCTV & Alarm Systems, Remote Access Management & Activity Logs and System Repairs, Upgrades & Maintenance</p>
+                <button class="read-more">Read More</button>
+              </div>
+              <div class="flip-card-back">
+                <h3 class="text-xl font-semibold mb-4">Access Control / Intrusion Detection</h3>
+                <p class="text-gray-700 text-center">At Defense-Tech Security Services, we provide advanced access control and intrusion detection solutions designed to prevent unauthorized entry, protect sensitive areas, and enhance overall site security. Our systems are scalable and suitable for residential, commercial, and high-security environments. Our services include: Installation of Keycard, Keypad, Biometric & RFID Systems, Door Entry & Gate Access Control Solutions, Intrusion Detection Systems with Real-Time Alerts, Integration with CCTV & Alarm Systems, Remote Access Management & Activity Logs and System Repairs, Upgrades & Maintenance</p>
+              </div>
+            </div>
+          </div>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <!-- shield-flash-svgrepo-com.svg -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" stroke="currentColor" class="text-blue-800 mx-auto" height="100">
+                  <path d="M32 4 L8 12 V28 C8 44 32 60 32 60 C32 60 56 44 56 28 V12 L32 4 Z" stroke-width="3" fill="white"/>
+                  <path d="M30 20 L36 20 L32 30 H38 L28 44 L30 32 H24 Z" fill="currentColor"/>
+                </svg>
+
+                <h3 class="text-xl font-semibold mb-2">Electric Fence & Intercom</h3>
+                <p class="text-gray-700 line-clamp-4">Defense-Tech Security Services offers robust electric fencing and intercom systems designed to strengthen perimeter security and improve controlled communication access. These systems serve as effective deterrents and vital components of a layered security solution for homes, businesses, and industrial properties. Our services include: Installation of High-Voltage Electric Fencing Systems, Perimeter Intrusion Detection & Alarm Integration, Maintenance, Repairs & System Upgrades, Audio & Video Intercom System Installation, Gate Entry Intercoms (Wired & Wireless) and Integration with Access Control & CCTV Systems</p>
+                <button class="read-more">Read More</button>
+              </div>
+              <div class="flip-card-back">
+                <h3 class="text-xl font-semibold mb-4">Electric Fence & Intercom</h3>
+                <p class="text-gray-700 text-center">Defense-Tech Security Services offers robust electric fencing and intercom systems designed to strengthen perimeter security and improve controlled communication access. These systems serve as effective deterrents and vital components of a layered security solution for homes, businesses, and industrial properties. Our services include: Installation of High-Voltage Electric Fencing Systems, Perimeter Intrusion Detection & Alarm Integration, Maintenance, Repairs & System Upgrades, Audio & Video Intercom System Installation, Gate Entry Intercoms (Wired & Wireless) and Integration with Access Control & CCTV Systems</p>
+              </div>
+            </div>
+          </div>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <!-- shield-flash-svgrepo-com.svg -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" stroke="currentColor" class="text-blue-800 mx-auto" height="100">
+                  <path d="M32 4 L8 12 V28 C8 44 32 60 32 60 C32 60 56 44 56 28 V12 L32 4 Z" stroke-width="3" fill="white"/>
+                  <path d="M30 20 L36 20 L32 30 H38 L28 44 L30 32 H24 Z" fill="currentColor"/>
+                </svg>
+
+                <h3 class="text-xl font-semibold mb-2">IT Security & Management Services</h3>
+                <p class="text-gray-700 line-clamp-4">At Defense-Tech Security Services, we provide comprehensive IT Security & Management Services to protect your digital infrastructure from cyber threats, data breaches, and system failures. Our solutions are designed to secure your network, ensure business continuity, and maintain compliance with industry standards. Our services include: Network Security & Firewall Configuration, Endpoint Protection & Antivirus Solutions, Data Backup & Disaster Recovery Planning, Email & Phishing Protection, IT Infrastructure Monitoring & Support, User Access Management & System Audits and Security Compliance Consulting (ISO, GDPR, etc.)</p>
+                <button class="read-more">Read More</button>
+              </div>
+              <div class="flip-card-back">
+                <h3 class="text-xl font-semibold mb-4">IT Security & Management Services</h3>
+                <p class="text-gray-700 text-center">At Defense-Tech Security Services, we provide comprehensive IT Security & Management Services to protect your digital infrastructure from cyber threats, data breaches, and system failures. Our solutions are designed to secure your network, ensure business continuity, and maintain compliance with industry standards. Our services include: Network Security & Firewall Configuration, Endpoint Protection & Antivirus Solutions, Data Backup & Disaster Recovery Planning, Email & Phishing Protection, IT Infrastructure Monitoring & Support, User Access Management & System Audits and Security Compliance Consulting (ISO, GDPR, etc.)</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -169,8 +313,8 @@ import '../styles/global.css';
 
     <!-- CTA section-->
     <section id="contact" class="py-20 bg-blue-800 text-white">
-      <h2 class="text-3xl font-bold mb-4 text-center">Let's Talk Cyber Security</h2>
-      <p class="mb-8 text-lg text-center">Drop your details — our experts will reach out within 24 hours.</p>
+      <h2 class="text-3xl font-bold mb-4 text-center">Let's Talk Security</h2>
+      <p class="mb-8 text-lg text-center">Drop your details — our experts will reach out.</p>
 
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid lg:grid-cols-2 gap-16">
@@ -238,11 +382,11 @@ import '../styles/global.css';
             <div class="grid md:grid-cols-2 gap-6">
               <div>
                 <label class="block mb-1 font-medium">Full Name</label>
-                <input type="text" name="name" placeholder="Full Name" requiblue class="p-3 rounded-md border w-full" />
+                <input type="text" name="name" placeholder="Full Name" required class="p-3 rounded-md border w-full" />
               </div>
               <div>
                 <label class="block mb-1 font-medium">Email Address</label>
-                <input type="email" name="email" placeholder="Email Address" requiblue class="p-3 rounded-md border w-full" />
+                <input type="email" name="email" placeholder="Email Address" required class="p-3 rounded-md border w-full" />
               </div>
             </div>
             <div>
@@ -251,7 +395,7 @@ import '../styles/global.css';
             </div>
             <div>
               <label class="block mb-1 font-medium">Message</label>
-              <textarea name="message" placeholder="Your Message" rows="4" requiblue class="p-3 rounded-md border w-full"></textarea>
+              <textarea name="message" placeholder="Your Message" rows="4" required class="p-3 rounded-md border w-full"></textarea>
             </div>
             <button type="submit" class="bg-blue-800 text-white mt-4 px-6 py-3 rounded-md hover:bg-blue-700 transition">
               Send Message
@@ -349,6 +493,16 @@ import '../styles/global.css';
 
   document.querySelectorAll('section').forEach(section => {
     observer.observe(section);
+  });
+
+  // Flip card functionality
+  document.querySelectorAll('.read-more').forEach(button => {
+    button.addEventListener('click', () => {
+      const cardInner = button.closest('.flip-card-inner');
+      if (cardInner) {
+        cardInner.classList.toggle('flipped');
+      }
+    });
   });
 </script>
   </html>

@@ -1,9 +1,9 @@
 ---
 import '../styles/global.css' 
 import { Image } from 'astro:assets'
-import cardImage from './screenshot.png'
-import solarPanel from  './solar_panel.jpg'
-import cables from './cables.jpg'
+import cardImage from './_screenshot.png'
+import solarPanel from  './_solar_panel.jpg'
+import cables from './_cables.jpg'
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -31,10 +31,8 @@ import cables from './cables.jpg'
   <body class="bg-gray-50">
     <!-- Header -->
     <header class="fixed top-0 w-full bg-white/90 backdrop-blur-md z-50 border-b border-gray-200">
-      <nav class="container mx-auto px-6  flex">
-        <img src="/thinktech-botswana/solar-logo.jpg" alt="Solar Tech Energy Systems Logo" width="100" class="pr-2" />
-
-         <div class="hidden md:flex items-center space-x-8">
+      <nav class="container mx-auto p-4  flex">
+         <div class="flex items-center space-x-8">
            <a href="/thinktech-botswana" class="text-gray-700 hover:text-yellow-600 transition-colors">Home</a>
            <a href="#services" class="text-gray-700 hover:text-yellow-600 transition-colors">Our Services</a>
            <a href="#about" class="text-gray-700 hover:text-yellow-600 transition-colors">About Us</a>
@@ -54,8 +52,8 @@ import cables from './cables.jpg'
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="min-h-screen flex items-center relative overflow-hidden pt-20 bg-gradient-to-br from-blue-600 via-green-600 to-blue-800">
-      <div class="absolute inset-0 bg-gradient-to-r from-yellow-400/20 to-orange-400/20"></div>
+    <section id="home" class="min-h-screen bg-[url(/thinktech-botswana/solar-logo.jpg)] bg-center bg-no-repeat bg-white flex items-center relative overflow-hidden pt-20">
+      <div class="absolute inset-0 bg-black/30"></div>
 
       <div class="container mx-auto px-6 relative z-10">
         <div class="grid md:grid-cols-2 gap-12 items-center">
@@ -119,7 +117,7 @@ import cables from './cables.jpg'
             Leading the Solar Revolution
           </h2>
           <p class="text-xl text-gray-600 mb-6 leading-relaxed">
-            Solartech Energy Systems(Pty) Ltd is a multi-discipline company that specialises
+            Solartech Energy Systems is a multi-discipline company that specialises
             in Solar Technolgy. Solartech Energy Systems delivers high quality and reliable
             Solar Energy services, construction and supplies services to different clients and
             customers, ranging from individuals to corporations and government sectors at all
@@ -246,7 +244,7 @@ Our <span class="font-bold">MISSION</span> is to be a globalised producer of cle
 
         <div class="grid md:grid-cols-3 gap-8">
           <!-- Card product 1 -->
-          <div class="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-3xl hover-lift">
+          <div class="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-3xl shadow-lg hover-lift">
             <Image src={solarPanel} alt="Card product" class="rounded-t-2xl w-full max-h-80"/>
             <div class="p-6">
               <h3 class="text-2xl font-bold mb-4 text-gray-800 text-center">Solar Panels and Batteries</h3>
@@ -260,7 +258,7 @@ Our <span class="font-bold">MISSION</span> is to be a globalised producer of cle
           </div>
 
           <!-- Card product 2 -->
-          <div class="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-3xl hover-lift">
+          <div class="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-3xl shadow-lg hover-lift">
             <Image src={cables} alt="Card product" class="rounded-t-2xl w-full max-h-80"/>
             <div class="p-6">
               <h3 class="text-2xl font-bold mb-4 text-gray-800 text-center">System Accesories</h3>
@@ -274,7 +272,7 @@ Our <span class="font-bold">MISSION</span> is to be a globalised producer of cle
           </div>
 
           <!-- Card product 3 -->
-          <div class="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-3xl hover-lift">
+          <div class="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-3xl shadow-lg hover-lift">
             <Image src={cardImage} alt="Card product" class="rounded-t-2xl w-full max-h-80"/>
             <div class="p-6">
               <h3 class="text-2xl font-bold mb-4 text-gray-800 text-center">Inverters</h3>
@@ -321,26 +319,6 @@ Our <span class="font-bold">MISSION</span> is to be a globalised producer of cle
             <p class="text-gray-400 leading-relaxed">
               Powering a sustainable future with innovative solar technology solutions.
             </p>
-          </div>
-
-          <div>
-            <h3 class="text-lg font-semibold mb-4">Services</h3>
-            <ul class="space-y-2 text-gray-400">
-              <li><a href="#" class="hover:text-white transition-colors">Residential Solar</a></li>
-              <li><a href="#" class="hover:text-white transition-colors">Commercial Solar</a></li>
-              <li><a href="#" class="hover:text-white transition-colors">Battery Storage</a></li>
-              <li><a href="#" class="hover:text-white transition-colors">Maintenance</a></li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 class="text-lg font-semibold mb-4">Company</h3>
-            <ul class="space-y-2 text-gray-400">
-              <li><a href="#" class="hover:text-white transition-colors">About Us</a></li>
-              <li><a href="#" class="hover:text-white transition-colors">Careers</a></li>
-              <li><a href="#" class="hover:text-white transition-colors">News</a></li>
-              <li><a href="#" class="hover:text-white transition-colors">Contact</a></li>
-            </ul>
           </div>
 
           <div>
